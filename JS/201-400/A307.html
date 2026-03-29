@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        let x = [34, 56, 78, 23, 19, 7];
+
+        // console.log(x[0]);
+        // console.log(x[1]);
+        // console.log(x[2]);
+        // console.log(x[3]);
+        // console.log(x[4]);
+        // console.log(x[5]);
+
+        //classic for loop 
+        // for(i=0; i < x.length; i++) {
+        //     console.log(x[i], '---');
+        // }
+
+        // for-of loop
+        // for(let next of x) {
+        //     console.log(next, '<----');
+        // }
+
+        // for-in loop
+        for(let next in x) {
+            console.log(next, x[next]);
+        }
+
+    </script>
+</body>
+</html>

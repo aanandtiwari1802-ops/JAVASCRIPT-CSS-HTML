@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x1 = {
+                    student_name: 'goutam', 
+                    age: 24, 
+                    college: 'nalanda',
+                    showInfo() {
+                        console.log(this.student_name, this.age, this.college, '~~~~~');
+                    },
+                    login() {
+                        console.log('the user is logged in... ');
+                    },
+                    logout() {
+                        console.log('the user is logged out... ');
+                    }
+                  };
+        
+        console.log('~~~~~~~~~~~~~~~~~~~ % ~~~~~~~~~~~~~~~~~~~~~');
+
+        const x2 = {
+                student_name: 'sanjay', 
+                age: 22, 
+                college: 'takshshila',
+                showInfo() {
+                    console.log(this.student_name, this.age, this.college, '----');
+                },
+                login() {
+                    console.log('the user is logged in... ');
+                },
+                logout() {
+                    console.log('the user is logged out... ');
+                }
+            };
+
+        x1.showInfo();          
+        x2.showInfo();          
+
+        x1.login()
+        x2.login()
+       
+        
+        // Uncaught ReferenceError: college is not defined
+    </script>
+</body>
+</html>

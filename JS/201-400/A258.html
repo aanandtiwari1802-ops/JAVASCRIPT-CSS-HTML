@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    Enter 1 for Hindi and 2 for Little South and 3 for absolute south and 4 for Sanskrit: 
+    <input type="text" id="a"> <br><br>
+
+    <input type="button" value="Act" id="btn">
+
+    <script>
+        const a = document.getElementById('a');
+        const btn = document.getElementById('btn');
+
+        const act = () => {
+            let val = parseInt(a.value);
+
+            switch(val) {
+                case 1:
+                    console.log('Namaste');
+                    break;
+                case 2:
+                    console.log('Namaskaram');
+                    break;
+                case 3:
+                    console.log('Vadakkam');
+                    break;
+                case 4:
+                    console.log('Namastubhyam');
+                    break;
+                default:
+                    console.log('Hi');
+            }
+        };
+
+        btn.onclick = act;
+    </script>
+</body>
+</html>

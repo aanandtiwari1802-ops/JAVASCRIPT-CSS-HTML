@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        function User(name, age) {
+            console.log(this, '~~~~');
+            this.name = name;
+            this.age = age;
+        }
+
+        function Student(name, age, college) {
+            // User.call(this, name, age);
+            User(this, name, age);
+            this.college = college;
+        }
+
+        function Teacher(name, age, qualification) {
+            // User.call(this, name, age);
+            User(this, name, age);
+            this.qualification = qualification;
+        }
+
+        const x = new Student('Balvindar', 22, 'SRIT');
+        const y = new Teacher('Raghunath', 56, 'PHd');
+        console.log(x);
+        console.log(y);
+    </script>
+</body>
+</html>

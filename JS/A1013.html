@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: verdana;
+        }
+
+        #tbl {
+            border: 1px solid #444; 
+            padding: 10px;
+            border-radius: 10px;
+            margin: 50px auto;
+            background-color: #eee;
+            box-shadow: 7px 7px 20px #888;
+        }
+
+        .a {
+            text-align: right;
+        }
+
+        input {
+            font-size: 22px;
+            padding: 8px 14px;
+            border-radius: 7px;
+            border: 1px solid #444;
+        }
+
+        label {
+            font-size: 22px;
+        }
+
+        tr {
+            height: 60px;
+        }
+
+        button {
+            font-size: 24px;
+            background-color: rgb(19, 103, 219);
+            color: white;
+            padding: 8px 14px;
+            border-radius: 7px;
+            border: 1px solid rgb(19, 103, 219);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table id="tbl" cellpadding="5">
+            <tr>
+                <td width="40%" class="a"><label for="unm">User Name</label>:</td>
+                <td width="60%"><input type="text" id="unm"></td>
+            </tr>
+            <tr>
+                <td class="a"><label for="eml">Email</label>:</td>
+                <td><input type="text" id="eml"></td>
+            </tr>
+            <tr>
+                <td class="a"><label for="pwd">Password</label>:</td>
+                <td><input type="password" id="pwd"></td>
+            </tr>
+            <tr>
+                <td class="a"><label for="ph">Phone</label>:</td>
+                <td><input type="tel" id="ph"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button type="submit">SignUp</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        const unm = document.querySelector('#unm');
+        const eml = document.querySelector('#eml');
+        const pwd = document.querySelector('#pwd');
+        const ph  = document.querySelector('#ph');
+
+        unm.addEventListener('blur', () => {
+            const p = /^[A-Za-z ]{5,30}$/;
+            if(p.test(unm.value)) {
+                console.log('Success');
+            } else {
+                console.log('Failed');
+            }
+        });
+    </script>
+</body>
+</html>

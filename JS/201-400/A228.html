@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    Add Sugar(y/n): <input type="text" id="inp">
+
+    <input type="button" value="Prep Tea" id="btn">
+
+    <script>
+        const inp = document.getElementById('inp');
+        const btn = document.getElementById('btn');
+
+        function prepTea() {
+            console.log('Boil Water');
+
+            if(inp.value == 'y') {
+                console.log('Add Sugar');
+            } else {
+                console.log('Add Sugar Free');
+            }
+
+            console.log('Add Tea Leaves');
+            console.log('Add Milk');
+            console.log('Pour Into a Cup and serve');
+        }
+
+        btn.onclick = prepTea;
+    </script>
+</body>
+</html>

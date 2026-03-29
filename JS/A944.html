@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        function aaa(a) {
+            a += 2;
+
+            function bbb() {
+                console.log(a);
+            }
+
+            a += 3;
+
+            return bbb;
+        }
+
+        let func1 = aaa(10); 
+        let func2 = aaa(20); 
+
+        func1();
+        func2();
+    </script>
+</body>
+</html>

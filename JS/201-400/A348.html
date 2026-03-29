@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = [20, 40, 60, 80];
+                
+        function lt50(n, i) {
+            console.log(n, i);
+            return n < 50;
+        }
+        
+        const y = x.filter((n, i) => { console.log(`>${n} ~ ${i}<`); return n < 50; });
+
+        console.log(x);
+        console.log(y);
+    </script>
+</body>
+</html>

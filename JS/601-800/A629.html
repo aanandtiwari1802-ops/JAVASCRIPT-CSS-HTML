@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: verdana;
+            color: #333;
+        }
+
+        table {
+            border: 1px solid #999;
+            border-collapse: collapse;
+            box-shadow: 5px 5px 15px #999;
+        }
+
+        thead {
+            color: rgb(9, 145, 148);
+            font-size: 20px;
+            background-color: beige;
+        }
+
+        thead th {
+            padding: 20px;
+        }
+        
+        td {
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        td:hover {
+            background-color: rgb(22, 95, 159);
+            color: #fff;
+        }
+
+        #box {
+            /* border: 5px solid red; */
+            width: 575px;
+            margin: 50px auto;
+        }
+
+        #month_year {
+            color: red;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div style="padding: 10px;text-align: center;">
+            <img src="prev.png" id="prev" width="35" style="float:left;cursor:pointer">
+            <b id="month_year"></b>
+            <img src="next.png" id="next" width="35" style="float:right;cursor:pointer">
+        </div>
+        <table align="center" style="margin-top:15px">
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const month_year = document.querySelector('#month_year');
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        const tbody = document.querySelector('tbody');
+        const next = document.querySelector('#next');
+        const prev = document.querySelector('#prev');
+
+        // set first date of the month
+        let dt = new Date();
+
+        next.addEventListener('click', () => {
+            // dt.setMonth(dt.getMonth() + 1);
+            console.log(dt)
+            showCal(dt);
+        });
+        
+        prev.addEventListener('click', () => {
+            dt.setMonth(dt.getMonth() - 2);
+            showCal(dt);
+        });
+        // --------------
+        // dt.setMonth(1);
+        // --------------
+
+        function showCal(dt) {
+            tbody.innerHTML = '';
+            let i = 0;
+            let flag = 0;
+
+            month_year.innerText = months[dt.getMonth()] + ', ' + dt.getFullYear();
+            dt.setDate(1);
+    
+            // get day of the first date of the month
+            let day = dt.getDay();
+            let month = dt.getMonth();
+    
+            while(true) {
+                let row = tbody.insertRow(i);
+                let end = 0;
+    
+                for(let j=0; j<7; j++) {
+                    let cell = row.insertCell(j);
+                    
+                    if(i == 0 && j == day) {
+                        flag = 1;
+                    }
+    
+                    if(flag) {
+                        cell.innerText = dt.getDate();
+                        // console.log(cell.innerText)
+                        dt.setDate(dt.getDate()+1);
+                        if(dt.getMonth() != month) {
+                            flag = 0;
+                            end = 1;
+                        }
+                    }    
+                }
+    
+                console.log(i + ' ---')
+                i++;
+                if(end) 
+                    break;
+            }
+        }
+
+        showCal(dt);
+    </script>
+</body>
+</html>

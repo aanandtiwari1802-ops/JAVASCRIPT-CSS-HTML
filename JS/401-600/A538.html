@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><input type="text" id="nm" placeholder="Enter Name"></p>
+    <p><input type="number" id="ag" placeholder="Enter Age"></p>
+    <p><input type="text" id="mk" placeholder="Enter Marks"></p>
+
+    <button id="btn">Act</button>
+
+    <script>
+        const btn = document.querySelector('#btn');
+
+        const x = {name: 'raghav', age: 18, marks: 89.77};
+
+        console.log(x);
+
+        const y = document.querySelectorAll('input');
+        let i = 0;
+
+        
+        function act() {
+            for(let prop in x) {
+                x[prop] = y[i++].value;
+            }
+
+            console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+            console.log(x);
+        }
+
+        // btn.onclick = act;
+
+        btn.addEventListener('click', act);
+    </script>
+</body>
+</html>

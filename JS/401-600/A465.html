@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const z = 'mohan    is  a      good   boy';
+
+        console.log(z)
+        
+        const a = [];
+
+        for(let i = 0; i < z.length; i++) {
+            let next = z.charAt(i);
+            
+            if(next != ' ')
+                a.push(next)
+            else
+                if(z.charAt(i+1) != ' ')
+                    a.push(' ')
+        }
+
+        console.log(a);
+
+        const b = a.toString();
+
+        console.log(b);
+
+        const c = a.join('');
+
+        console.log(c)
+    </script>
+</body>
+</html>

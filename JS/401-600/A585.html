@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #x {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <table id="x" border="1" align="center" cellpadding="10">
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+            <td>J</td>
+        </tr>
+        <tr>
+            <td>K</td>
+            <td>L</td>
+            <td>M</td>
+            <td>N</td>
+            <td>O</td>
+        </tr>
+    </table>
+
+    <script>
+        const x = document.querySelector('#x');
+
+        x.addEventListener('click', () => {
+            x.style.backgroundColor = 'yellow';
+        });
+
+        const rows = Array.from(x.rows);
+
+        console.log(rows);
+
+        rows.forEach((row) => {
+            row.addEventListener('click', () => {
+                console.log(this);
+            });
+        });
+    </script>
+</body>
+</html>

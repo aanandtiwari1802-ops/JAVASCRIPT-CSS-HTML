@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+        let dt = new Date();
+
+        console.log(dt)
+
+        dt.setDate(1);
+
+        console.log(dt)
+
+        let day = dt.getDay();
+        console.log(day, days[day])
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        function Student(name, age, college) {
+            console.log(this, '-----'); 
+        }
+
+        const x1 = Student('Vijay Singh', 21, 'SRIT');
+
+        console.log(x1, '~~~~~~~~~');
+        
+        console.log('~~~~~~~~~~~x~~~~~~~~~~~~~');
+
+        const x2 = new Student('Vikas Singh', 17, 'GGITS');
+
+        console.log(x2, '~~~~~~~~~');
+    </script>
+</body>
+</html>

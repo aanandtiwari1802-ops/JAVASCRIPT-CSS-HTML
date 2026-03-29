@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Index PAge</h2>
+
+    <hr>
+
+    <table border="1" width="50%" align="center">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>College</th>
+            </tr>
+        </thead>
+
+        <tbody id="records">
+
+        </tbody>
+    </table>
+
+    <button id="btn">Show</button>
+
+    <script>
+        const records = document.querySelector('#records');
+        const btn = document.getElementById('btn');
+        
+        const arr = [
+                        {name: 'vinay', age: 19, college: 'global'}, 
+                        {name: 'pranay', age: 18, college: 'jec'}, 
+                        {name: 'megha', 'age': 21, college: 'srit'}
+                    ];
+
+        btn.addEventListener('click', () => {
+            let i = 0;
+            for(let nextObj of arr) {
+                let row = records.insertRow(i++);
+                let j = 0;
+                for(let nextKey in nextObj) {
+                    let cell = row.insertCell(j++);
+                    cell.innerText = nextObj[nextKey];
+                }
+            }
+        });
+
+        // for(let nextObj of arr) {
+        //     for(let nextKey in nextObj) {
+        //         console.log(nextKey, ':', nextObj[nextKey]);
+        //     }
+        //     console.log('~~~~~~~~~~~~~~~~~~');
+        // }
+
+    </script>
+</body>
+</html>

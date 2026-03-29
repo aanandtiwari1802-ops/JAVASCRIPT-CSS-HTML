@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #a {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <hr>
+
+    <input type="text" id="inp"> <br><br>
+    <span id="a"></span> <br><br>
+    <input type="button" id="btn" value="Click Me">
+
+    <script>
+        const inp = document.querySelector('#inp');
+        const a = document.querySelector('#a');
+        const btn = document.querySelector('#btn');
+
+        let str = null;
+
+        inp.addEventListener('keyup', () => {
+            a.innerText = inp.value;
+            str = inp.value;
+        });
+
+        btn.addEventListener('click', () => {
+            console.log(str);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>  
+        const ar1 = ['om','ram','jay'];
+        const ar2 = ['arju','nakul','sahdev'];
+
+        // const ar3 = ar1.concat(ar2, 45);
+        // const ar3 = [ar1, 45, ar2];
+        const ar3 = [...ar1, 45, ...ar2];
+
+        console.log(ar1, typeof ar1);
+        console.log(ar2, typeof ar2);
+        console.log(ar3, typeof ar3);
+
+    </script>
+</body>
+</html>

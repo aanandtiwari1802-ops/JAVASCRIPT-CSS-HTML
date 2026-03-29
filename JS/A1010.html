@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        // ----- x ----
+        const re = /.*?xx/g;    
+
+        const target = '0a_7u56xx yu#Ez5xx';
+
+        // console.log(target.match(re));
+        for(let next of target.matchAll(re))
+            console.log(next[0]);
+    </script>
+</body>
+</html>

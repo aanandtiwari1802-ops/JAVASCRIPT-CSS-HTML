@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    Enter First Number: <input type="number" id="a"> <br><br>
+    Enter Second Number: <input type="number" id="b"> <br><br>
+
+    <input type="button" value="Check" id="btn">
+
+    <script>
+        const a = document.getElementById('a');
+        const b = document.getElementById('b');
+
+        const btn = document.getElementById('btn');
+
+        const findGreater = () => {
+            let firstNum = a.value;
+            let secondNum = b.value;
+            
+            if(firstNum > secondNum) {
+                console.log(`First Number: ${firstNum} is Greater Than Second Number: ${secondNum}`);
+            } else {
+                console.log(`Second Number: ${secondNum} is Greater Than First Number: ${firstNum}`);
+            }
+        };
+
+        btn.onclick = findGreater;
+    </script>
+</body>
+</html>

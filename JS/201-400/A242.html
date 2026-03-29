@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    Enter Age: <input type="number" id="age">  <br><br>
+
+    Select Gender: 
+    <input type="radio" name="gender" id="male">M &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="gender" id="female">F  <br><br>
+
+    Do you want cheque book: <input type="checkbox" id="cb"> <br><br>
+
+    <input type="button" id="btn" value="Show Account Info">
+
+    <script>
+        const ageField = document.getElementById('age');
+        const maleField = document.getElementById('male');
+        const femaleField = document.getElementById('female');
+        const cb = document.getElementById('cb');
+        
+        const btn = document.getElementById('btn');
+
+        const showInfo = () => {
+            // console.log(femaleField.checked);
+            // console.log(maleField.checked);
+            age = ageField.value;
+
+            if(femaleField.checked) {
+                if(age <= 22) {
+                    console.log(`MB: ${cb.checked?0+500:0} and RI: 4%`);
+                } else if(age > 60) {
+                    console.log(`MB: ${cb.checked?0+500:0} and RI: 12%`);
+                } else {
+                    console.log(`MB: ${cb.checked?2000+500:2000} and RI: 8%`);
+                }
+            } else {
+                if(age <= 22) {
+                    console.log(`MB: ${cb.checked?500+500:500} and RI: 2%`);
+                } else if(age > 60) {
+                    console.log(`MB: ${cb.checked?2000+500:2000} and RI: 11%`);
+                } else {
+                    console.log(`MB: ${cb.checked?5000+500:5000} and RI: 6%`);
+                }
+            }
+        };
+
+        btn.onclick = showInfo;
+    </script>
+</body>
+</html>

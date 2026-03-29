@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    Enter start number: 
+    <input type="text" id="s"> <br><br>
+    
+    Enter Count:
+    <input type="text" id="n"> <br><br>
+    
+    Enter Step:
+    <input type="text" id="t"> <br><br>
+
+    <input type="button" id="btn" value="Save">
+
+    <script>
+        const s = document.getElementById('s');
+        const n = document.getElementById('n');
+        const t = document.getElementById('t');
+        
+        const btn = document.getElementById('btn');
+
+        function act() {
+            let start = parseInt(s.value);
+            let count = parseInt(n.value);
+            let step = parseInt(t.value);
+
+            for(i = 0; i < count; i++) {
+                console.log(start);
+                start = start + step;
+            }
+        }
+
+        btn.onclick = act;
+    </script>
+</body>
+</html>

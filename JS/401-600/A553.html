@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Password: <input type="password" id="x"> <img src="show_pass.png" height="16" id="btn">
+
+
+    <script>
+        const x = document.querySelector('#x');
+        const btn = document.querySelector('#btn');
+
+        let flag = true;
+
+        btn.addEventListener('click', () => {
+            if(flag) {
+                x.type = 'text';
+                flag = false;
+            } else {
+                x.type = 'password';
+                flag = true;
+            }
+        });
+    </script>
+</body>
+</html>

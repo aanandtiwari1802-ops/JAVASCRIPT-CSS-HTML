@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = 'om is a good boy and he is a singer and he is in class 12th and he lives on an island';
+
+        console.log(x.lastIndexOf('is', x.length-1)); // 79 
+        console.log(x.lastIndexOf('is', 78)); // 43 
+        console.log(x.lastIndexOf('is', 42)); // 24 
+        console.log(x.lastIndexOf('is', 23)); // 3 
+        console.log(x.lastIndexOf('is', 2)); // -1 
+    </script>
+</body>
+</html>

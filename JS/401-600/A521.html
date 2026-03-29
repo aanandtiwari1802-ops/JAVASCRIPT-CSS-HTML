@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    
+    <span id="aa">A1</span>
+    <span id="bb" class="x">A2</span>
+    <span id="cc">A3</span>
+    <span id="dd" class="x">A4</span>
+
+    <script>
+        const a = document.getElementsByClassName('x');
+        const c = document.querySelectorAll('.x');
+
+        // HTMLCollection: TypeError: a.forEach is not a function
+        // a.forEach((next)=>{
+        //     console.log(next);
+        // });
+
+        // NodeList.forEach()
+        c.forEach((next)=>{
+            console.log(next);
+        });
+    </script>
+</body>
+</html>

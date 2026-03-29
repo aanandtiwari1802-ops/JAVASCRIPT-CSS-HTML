@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        class User {
+            constructor(name, age, email) {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+            }
+
+            show_info() {
+                console.log(`My Name is: ${this.name}`);
+                console.log(`My Age is: ${this.age}`);
+                console.log(`My Email is: ${this.email}`);
+            }
+        }
+
+        class Student extends User {
+            constructor(name, age, email, degree, branch, semester) {
+                super(name, age, email);
+                // this.name = name;
+                // this.age = age;
+                // this.email = email;
+                this.degree = degree;
+                this.branch = branch;
+                this.semester = semester;
+            }
+
+            show_info() {
+                super.show_info();
+                // console.log(`My Name is: ${this.name}`);
+                // console.log(`My Age is: ${this.age}`);
+                // console.log(`My Email is: ${this.email}`);
+                console.log(`My Degree is: ${this.degree}`);
+                console.log(`My Branch is: ${this.branch}`);
+                console.log(`My Semester is: ${this.semester}`);
+            }
+        }
+
+        class Teacher extends User {
+            constructor(name, age, email, qualification, experience, salary) {
+                super(name, age, email);
+                // this.name = name;
+                // this.age = age;
+                // this.email = email;
+                this.qualification = qualification;
+                this.experience = experience;
+                this.salary = salary;
+            }
+
+            show_info() {
+                super.show_info();
+                // console.log(`My Name is: ${this.name}`);
+                // console.log(`My Age is: ${this.age}`);
+                // console.log(`My Email is: ${this.email}`);
+                console.log(`My Qualification is: ${this.qualification}`);
+                console.log(`My Experience is: ${this.experience}`);
+                console.log(`My Salary is: ${this.salary}`);
+            }
+        }
+
+        const x = new Student('Ram', 23, 'ram@gmail.com', 'MTech', 'CS', '1st');
+        const y = new Teacher('Mr Prabhakar', 57, 'prabha@gmail.com', 'MTech', 13, 92000);
+
+        // console.log(x);
+        // console.log(y);
+
+        x.show_info();
+        console.log('~~~~~~~~~~~~~~~~~~~~~');
+        y.show_info();
+
+    </script>
+</body>
+</html>

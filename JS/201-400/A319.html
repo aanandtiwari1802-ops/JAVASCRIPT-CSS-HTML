@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = [24, 10, 63, 32, 71, 48, 59, 4];
+        
+        let flag = false; 
+
+        for(i = 0; i < x.length; i++) {
+            if(x[i] % 2 != 0) {
+                console.log('~~~~')
+                flag = true;
+                break;
+            }
+        }
+
+        console.log(`does the ${x} contain any odd number? - ${flag}`)
+    </script>
+</body>
+</html>

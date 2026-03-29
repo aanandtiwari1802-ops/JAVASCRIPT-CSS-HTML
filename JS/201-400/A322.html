@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = [25, 10, 65, 32, 71, 48, 59, 4];
+
+        const y = [11, 5, 32,  21, 65, 58, 7, 25];
+
+        const z = [];
+        
+        for(i = 0; i < x.length; i++) {
+            let flag = true;
+            for(j = 0; j < y.length; j++) {
+                if(x[i] == y[j]) {
+                    flag = false;
+                    break;
+                }
+            }
+
+            if(flag) 
+                z.push(x[i])
+        }
+        
+        console.log(x);
+        console.log(y);
+        console.log(z);
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input {
+            font-size: 22px;
+            font-weight: bold;
+            padding: 4px 8px;            
+        }
+
+        .b {
+            color: #444;
+        }
+
+        .g {
+            box-shadow: 5px 5px 10px green;
+            color: green;
+        }
+
+        .r {
+            box-shadow: 5px 5px 10px red;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <input type="text" id="a" class="b">
+
+    <script>
+        const a = document.querySelector('#a');
+
+        a.addEventListener('focus', () => {
+            a.classList.replace('b', 'g');
+        });
+    </script>
+</body>
+</html>

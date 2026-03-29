@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="nobita.jpg" height="300">
+    <br><br>
+    <button id="btn">Action</button>
+
+    <script>
+        const arr = ['shinchan.jpg', 'ninja.jpeg', 'nobita.jpg', 'doraemon.jpg', 'sizuka.jpg', 'gian.jpg'];
+
+        const x = document.images;
+
+        const btn  = document.querySelector('#btn');
+
+        console.log(x);
+        console.log(x[0]);
+        console.log(x[0].src);
+
+        btn.addEventListener('click', () => {
+            // x[0].src = 'sizuka.jpg';
+            // console.log(Math.floor(Math.random()*arr.length))
+            let n = Math.floor(Math.random() * arr.length);
+            
+            // console.log(n, arr[n])
+            x[0].src = arr[n];
+        });
+    </script>
+</body>
+</html>

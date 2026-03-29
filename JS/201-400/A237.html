@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    Enter Book Price: <input type="number" id="price">
+
+    <input type="button" value="Action" id="btn">
+
+    <script>
+        const price = document.getElementById('price');
+        const btn = document.getElementById('btn');
+
+        const takeAction = () => {
+            if(price.value <= 200) {
+                console.log('Buy Now');
+            } else if(price.value < 400) {
+                console.log('Buy Later');
+            } else {
+                console.log('Don\'t Buy');
+            }
+        };
+
+        btn.onclick = takeAction;
+    </script>
+</body>
+</html>

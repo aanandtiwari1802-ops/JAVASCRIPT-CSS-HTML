@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="nobita.jpg" height="300">
+
+
+    <script>
+        const arr = ['shinchan.jpg', 'ninja.jpeg', 'nobita.jpg', 'doraemon.jpg', 'sizuka.jpg', 'gian.jpg'];
+
+        const x = document.images;
+
+        setInterval(() => {
+            let n = Math.floor(Math.random()*arr.length);
+            x[0].src = arr[n];
+        }, 1000);
+    </script>
+</body>
+</html>

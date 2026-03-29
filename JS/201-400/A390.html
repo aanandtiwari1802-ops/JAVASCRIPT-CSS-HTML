@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        function random50() {
+            let x = Math.random() * 50;
+            return Math.ceil(x);
+        }
+
+        let next;
+        do {
+            next = random50();
+            if(next < 40)
+                console.log(next);
+        } while(next < 40);
+    </script>
+</body>
+</html>

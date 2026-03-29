@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="inp">
+        <option value="0">Select</option>
+        <option value="1">Shakkar</option>
+        <option value="2">Bina Shakkar</option>
+        <option value="3">Gud</option>
+        <option value="4">Shahad</option>
+        <option value="5">Shakkar Free</option>
+    </select>
+
+    <hr>   
+
+    <script>
+        const inp = document.getElementById('inp');
+        
+
+        function prepTea() {
+            console.log('Boil Water');
+
+            if(inp.value == 1) {
+                console.log('Add Shakkar');
+            } else if(inp.value == 2) {
+                console.log('Bina Shakkar');
+            } else if(inp.value == 3) {
+                console.log('Add Gud');
+            } else if(inp.value == 4) {
+                console.log('Add Shahad');
+            } else if(inp.value == 5) {
+                console.log('Shakkar Free');
+            }
+
+            console.log('Add Tea Leaves');
+            console.log('Add Milk');
+            console.log('Pour Into a Cup and serve');
+        }
+
+        inp.onchange = prepTea;
+    </script>
+</body>
+</html>

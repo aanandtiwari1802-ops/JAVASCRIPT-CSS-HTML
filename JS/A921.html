@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Duniya Walon..</h1>
+
+    <hr>
+
+    <table border="1" width="20%" align="center">
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody id="box">
+
+        </tbody>
+    </table>
+
+    <button type="button" id="btn">Show Local Storage Records</button>
+
+    <script>
+        localStorage.setItem('Name', 'Rajiv');
+        localStorage.setItem('Age', 34);
+        localStorage.setItem('Branch', 'CS');
+        localStorage.setItem('Semester', '3rd');
+
+        const btn = document.querySelector('#btn');
+        const box = document.querySelector('#box');
+
+        btn.addEventListener('click', () => {
+            const len = localStorage.length;
+
+            for(i=0;i<len;i++) {
+                const key = localStorage.key(i);
+                const row = box.insertRow(i);
+
+                const keyCell = row.insertCell(0);
+                keyCell.innerText = key;
+
+                const valueCell = row.insertCell(1);
+                valueCell.innerText = localStorage.getItem(key);
+            }
+        });
+
+    </script>
+</body>
+</html>

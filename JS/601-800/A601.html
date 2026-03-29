@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #calc {
+            width: 290px;
+            /* height: 500px; */
+            border: 2px solid rgb(102, 170, 237);
+            border-radius: 7px;
+            margin: 70px auto;
+            padding: 10px;
+            box-shadow: 5px 5px 15px rgb(102, 170, 237);
+        }
+
+        #screen {
+            /* height: 70px; */
+            border: 2px solid rgb(102, 170, 237);
+            border-radius: 7px;
+            margin-bottom: 5px;
+            text-align: right;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: verdana;
+            /* padding: 15px; */
+            color: rgb(76, 134, 193);
+        }
+
+        #keypad {
+            /* height: 300px; */
+            /* border: 2px solid rgb(91, 79, 79); */
+            border-radius: 7px;
+        }
+
+        td {
+            color: rgb(76, 134, 193);
+            font-size: 22px;
+            font-weight: bold;
+            font-family: verdana;
+            height: 50px;
+            text-align: center;
+            width: 25%;
+            cursor: pointer;
+            border: 1px solid rgb(102, 170, 237);
+        }
+
+        td:hover {
+            background-color: rgb(212, 226, 178);
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="calc">
+        <!-- <div id="screen">2 + 3 * 4</div> -->
+        <div id="keypad">
+            <table width="100%" cellspacing="10">
+                <tr>
+                    <td colspan="4" id="screen" style="padding-right:10px">2 + 3 * 4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>*</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>=</td>
+                    <td>%</td>
+                    <td>/</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    Enter First Number: <input type="number" id="a"> <br><br>
+    Enter Second Number: <input type="number" id="b"> <br><br>
+    Enter Third Number: <input type="number" id="c"> <br><br>
+
+    <input type="button" value="Check" id="btn">
+
+    <script>
+        const a = document.getElementById('a');
+        const b = document.getElementById('b');
+        const c = document.getElementById('c');
+
+        const btn = document.getElementById('btn');
+
+        const findGreater = () => {
+            let firstNum = a.value;
+            let secondNum = b.value;
+            let thirdNum = c.value;
+            
+            if(firstNum > secondNum && firstNum > thirdNum) {
+                console.log(`The First Number: ${firstNum} is greatest`);                 
+            } else if(secondNum > thirdNum) {
+                console.log(`The Second Number: ${secondNum} is greatest`); 
+            } else {
+                console.log(`The Third Number: ${thirdNum} is greatest`)
+            }
+        };
+
+        btn.onclick = findGreater;
+    </script>
+</body>
+</html>

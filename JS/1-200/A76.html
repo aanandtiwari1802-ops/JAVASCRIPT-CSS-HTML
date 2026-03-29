@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Some Text</h1>
+
+    <hr>
+
+    <script>        
+
+        //global scope variables        
+        let flag = true;
+
+        while(flag) {
+            if(12<13) {
+                for(i=0;i<1;i++) {
+                    var a = 7;
+                    let b = 8;
+                    const c = 9;
+
+                    console.log(a, '~~~~~for~~~~~~~~');
+                    console.log(b, '~~~~~for~~~~~~~~'); 
+                    console.log(c, '~~~~~for~~~~~~~~'); 
+                }
+                
+                console.log(a, '~~~~~~~if~~~~~~');
+                console.log(b, '~~~~~~~if~~~~~~'); 
+                console.log(c, '~~~~~~~if~~~~~~'); 
+            }
+            console.log(a, '~~~~~~~while~~~~~~');
+
+            flag = false;
+        }
+
+        console.log(a, '~~~~~~~global scope~~~~~~');
+
+         
+    </script>
+</body>
+</html>

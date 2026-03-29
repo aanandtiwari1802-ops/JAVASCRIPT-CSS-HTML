@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index page</h1>
+
+    <hr>
+
+    <input type="search" placeholder="Enter Search Key" id="inp">
+
+    
+    <script>
+        const inp = document.querySelector('#inp');
+
+        let i = 0;
+        const networkRequest = () => {
+            console.log(i++, 'Request...', inp.value);
+        };
+
+        const debounceFunction = (func, delay) => {
+            let timer = null;
+
+            const optimizedNetworkRequest = () => {
+                clearTimeout(timer);
+                timer = setTimeout(()=>{
+                    func();
+                }, delay);
+            };
+
+            return optimizedNetworkRequest;
+        }
+
+        const waitAndRequest = debounceFunction(networkRequest, 300)
+
+        inp.addEventListener('keyup', () => {
+            // networkRequest();
+            // optimizedNetworkRequest();
+            waitAndRequest();
+        });
+    </script>
+</body>
+</html>

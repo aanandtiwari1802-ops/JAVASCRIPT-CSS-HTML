@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World...</h1>
+
+    <hr>
+
+
+    <select id="x">
+        <option value="0">Select</option>
+        <option value="1">Jabalpur</option>
+        <option value="2">Jaipur</option>
+        <option value="3">Jagdalpur</option>
+        <option value="4">Kanpur</option>
+        <option value="5">Nagpur</option>
+    </select>
+
+    <script>
+        const x = document.querySelector('#x');
+        
+        x.addEventListener('change', () => {
+            console.log(x.value, '+++++++');
+        }); 
+    </script>
+</body>
+</html>

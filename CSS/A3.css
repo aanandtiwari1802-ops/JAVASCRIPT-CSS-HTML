@@ -1,0 +1,16 @@
+/* External CSS*/
+
+p {
+    color: #fff;
+    font-size: 18px;
+    font-family: verdana;
+    border: 3px solid rgb(207, 15, 85);
+    border-radius: 12px;
+    padding: 30px;
+    background-color: rgb(71, 9, 227);
+    box-shadow: 10px 10px 15px #e70606;
+    width: 70%;
+    margin: 50px auto;
+    cursor: help;
+    font-weight: bold;
+}

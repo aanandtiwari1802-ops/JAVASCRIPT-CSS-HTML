@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <input type="number" id="inp" placeholder="Enter Radius">
+
+    <br><br>
+
+    <input type="button" value="Calculate Area" id="btn">
+
+    <script>
+        const inp = document.querySelector('#inp');
+        const btn = document.querySelector('#btn');
+
+        const pi = 3.14;
+
+        const calcCircleArea = (radius) => {
+            console.log('function called... for input', radius);
+            console.log(pi * radius * radius);
+        };
+
+        btn.addEventListener('click', () => {
+            calcCircleArea(inp.value);
+        });
+    </script>
+</body>
+</html>

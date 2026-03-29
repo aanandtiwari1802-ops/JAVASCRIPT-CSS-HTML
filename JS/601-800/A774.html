@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        // Spread Operator...
+        function pro(a, b, c) {
+            console.log(a, b, c);
+        }
+
+        const arr = [11, 22, 33];
+
+        pro(...arr);  // pro(...arr); => pro(11, 22, 33);
+        
+        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+        // Rest Operator...
+        function info(...y) {
+            console.log(y[0][0],y[0][1],y[0][2]);
+        }
+
+        const ar = [99, 88, 77];
+
+        info(ar);
+
+
+    </script>
+</body>
+</html>

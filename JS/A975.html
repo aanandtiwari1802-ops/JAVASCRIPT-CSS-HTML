@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://aws.amazon.com" id="frm">
+        <input type="text" name="info" id="info"> <br><br>
+
+        <input type="submit" id="btn" value="Save">
+    </form>
+
+    <script>
+        const info = document.querySelector('#info');
+        const btn = document.querySelector('#btn');
+        const frm = document.querySelector('#frm');
+
+        btn.addEventListener('click', () => {
+            // min 5 characters
+            if(info.value.trim().length > 4) 
+                frm.submit();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <style>
+        .col {
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal fade" data-bs-backdrop="static" id="x">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Product Info</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, quis expedita? Ipsa vitae itaque aut suscipit delectus iste accusantium sequi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum incidunt illum alias excepturi repudiandae rem velit ab. Et dolorem dicta velit. Ducimus recusandae accusamus excepturi id quam impedit, nesciunt sequi.
+                        tetur recusandae. Voluptas, in ipsa? Eum tenetur recusandae ullam voluptate quo voluptatem sunt omnis voluptatibus exercitationem.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Show Info</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-bs-target="#x" data-bs-toggle="modal">Open Window...</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

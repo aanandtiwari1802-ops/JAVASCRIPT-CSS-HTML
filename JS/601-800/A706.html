@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        class Car {
+            clutch() {
+
+            }
+
+            gear() {
+
+            }
+
+            break() {
+                console.log('generalized break...');
+            }
+        }
+
+        // method overriding...
+        class SportsCar extends Car {
+            break() {
+                console.log('sports car break...');
+            }
+        }
+
+        class LuxuryCar extends Car {
+            break() {
+                console.log('luxury car break...');
+            }
+        }
+
+        const x = new LuxuryCar();
+        const y = new SportsCar();
+
+        x.break();
+        y.break();
+    </script>
+</body>
+</html>

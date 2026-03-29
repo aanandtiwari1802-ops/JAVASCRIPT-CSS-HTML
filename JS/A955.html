@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #x {
+            border: 4px solid red;
+            height: 500px;
+        }
+
+        #y {
+            border: 2px solid green;
+            font-size: 26px;
+            font-weight: bold;
+            padding: 8px 12px;
+            font-family: verdana;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <div id="x">  </div>
+
+    <span id="y">x: 0 and y: 0</span>
+    
+    <script>
+        const x = document.querySelector('#x');
+        const y = document.querySelector('#y');
+
+        x.addEventListener('mousemove', (e) => {
+            y.innerText = `x: ${e.screenX} and y: ${e.screenY}`
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World....</h1>
+
+    <hr>
+
+    Gender(m/f): <input type="text" maxlength="1" id="g"> <br><br>
+    Age: <input type="number" id="a"> <br><br>
+
+    <input type="button" value="Show" id="btn">
+
+    <script>
+        const a = document.getElementById('a');
+        const g = document.getElementById('g');
+        const btn = document.getElementById('btn');
+
+        const act = () => {
+            let age = parseInt(a.value);
+            let gender = g.value;
+
+            switch(gender) {
+                case 'f':
+                    if(age<=22) {
+                        console.log('MB: 0 and RI: 4%');
+                    } else if(age > 60) {
+                        console.log('MB: 0 and RI: 12%');
+                    } else {
+                        console.log('MB: 2000 and RI: 8%');
+                    }
+                    break;
+                case 'm':
+                    if(age<=22) {
+                        console.log('MB: 500 and RI: 2%');
+                    } else if(age > 60) {
+                        console.log('MB: 2000 and RI: 11%');
+                    } else {
+                        console.log('MB: 5000 and RI: 6%');
+                    }
+                    break;
+                default:
+                    console.log('Invalid Input!!');
+            }
+        };
+
+        btn.onclick = act;
+    </script>
+</body>
+</html>

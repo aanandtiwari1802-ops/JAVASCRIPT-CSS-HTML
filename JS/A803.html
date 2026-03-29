@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+
+        const sendRequest = (n) => {
+            console.log('---- start -' + n + ' -------')
+            const req = new XMLHttpRequest();
+    
+            req.open('GET', 'https://jsonplaceholder.typicode.com/todos/' + n, true);
+    
+            req.addEventListener('readystatechange', () => {
+                if(req.readyState == 4 && req.status == 200) {
+                    const resp = req.responseText;
+                    console.log(resp, ' ~ ', typeof resp);
+    
+                    const obj = JSON.parse(resp);
+                    console.log(obj, ' - ', typeof obj);
+                }
+            });
+    
+            req.send();
+        };
+
+        console.log('--- send request ---');
+        sendRequest(69);
+        console.log('--- send request ---');
+        sendRequest(102);
+        console.log('--- send request ---');
+        sendRequest(172);
+        // notice the response sequence: repeat refresh
+    </script>
+</body>
+</html>

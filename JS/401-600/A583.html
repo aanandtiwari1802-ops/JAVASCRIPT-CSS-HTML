@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #x, td {
+            border: 1px solid red;
+            /* padding: 10px; */
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table id="x" align="center" width="70%">
+        
+    </table>
+
+    <button id="btn">Show</button>
+
+    <script>
+        const x = document.querySelector('#x');
+        const btn = document.querySelector('#btn');
+
+        const arr = [
+                        {name: 'yamraj', age: 10000, salary: 'gold', place: 'yamlok'},
+                        {name: 'indra', age: 2000, salary: 'iron', place: 'devlok'},
+                        {name: 'varun', age: 5000, salary: 'silver', place: 'jallok'},
+                        {name: 'surya', age: 7000, salary: 'platinum', place: 'akashlok'},
+                        {name: 'pawan', age: 1000, salary: 'aluminium', place: 'vayulok'}
+                    ];
+
+        btn.addEventListener('click', () => {
+            for(let obj of arr) {
+                let row = document.createElement('tr');
+                x.append(row);
+
+                for(let prop in obj) {
+                    let cell = document.createElement('td');
+                    row.append(cell);
+                    cell.innerText = obj[prop];        
+                }
+            }
+        });
+    </script>
+</body>
+</html>

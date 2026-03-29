@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <hr>
+
+    <form action="#" id="a">
+        User Name: <input type="text"> <br><br>
+        College: <input type="text"> <br><br>
+        Degree: <input type="text"> <br><br>
+        Branch: <input type="text"> <br><br>
+        Semester: <input type="text"> <br><br>
+        <select id="w">
+            <option>Jabalpur</option>
+            <option>Bhopal</option>
+            <option>Gwalior</option>
+            <option>Indore</option>
+            <option>Panna</option>
+            <option>Satna</option>
+        </select>
+
+        <br><br>
+        <input type="submit" value="Save">
+    </form>
+
+    <script>
+        let y = document.getElementById('w');
+
+        console.log(y);
+
+        let z = y.options;
+
+        console.log(z);
+    </script>
+</body>
+</html>

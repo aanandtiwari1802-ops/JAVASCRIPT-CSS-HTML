@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <div id="box"></div>
+
+    <input type="button" value="Show" id="btn">
+
+    <script>
+        const box = document.querySelector('#box'); 
+        const btn = document.querySelector('#btn');
+        
+        const getAnImage = async () => {
+            const response  = await fetch('https://picsum.photos/v2/list?page=1&limit=1');
+            const result = await response.json();
+
+            const img = document.createElement('img');
+            img.src = result[0].download_url;
+            img.style.height = '200px';
+            box.append(img);
+        };
+
+        btn.addEventListener('click', () => {
+            getAnImage();
+        });
+    </script>
+</body>
+</html>

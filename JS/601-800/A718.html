@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        function User(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        // class User {
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+        // }
+
+        function Student(name, age, college) {
+            super(name, age);
+            this.college = college;
+        }
+
+        // class Student extends User {
+        //     constructor(name, age, college) {
+        //         super(name, age);
+        //         this.college = college;
+        //     }
+        // }
+
+        const x = new Student('Balvindar', 22, 'SRIT');
+        console.log(x);
+    </script>
+</body>
+</html>

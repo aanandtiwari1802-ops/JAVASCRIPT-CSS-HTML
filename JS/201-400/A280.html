@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <input type="number" id="a">  <br><br>
+    
+    <input type="radio" name="op" value="+"> <strong>+</strong> <br><br>
+    <input type="radio" name="op" value="-"> <strong>-</strong> <br><br>
+    <input type="radio" name="op" value="*"> <strong>*</strong> <br><br>
+    <input type="radio" name="op" value="/"> <strong>/</strong> <br><br>
+    <input type="radio" name="op" value="%"> <strong>%</strong> <br><br>
+    
+    <input type="number" id="b">  <br><br>
+
+    <input type="button" value="Calculate" id="btn">
+    
+    <script>
+        const a = document.getElementById('a');
+        const b = document.getElementById('b');
+
+        const all = document.getElementsByName('op');
+
+        const btn = document.getElementById('btn');
+
+        const calc = () => {
+            let x = parseInt(a.value);
+            let y = parseInt(b.value);
+
+            let op = null;
+
+            for(i=0;i<all.length;i++) 
+                if(all[i].checked) 
+                    op = all[i].value;            
+
+            console.log(op=='+'?x+y:op=='-'?x-y:op=='*'?x*y:op=='/'?x/y:op=='%'?x%y:'Please choose an operator...');
+        };
+
+        btn.onclick = calc;
+    </script>
+</body>
+</html>

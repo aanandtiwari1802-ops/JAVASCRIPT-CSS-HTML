@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    Enter Marks(%): <input type="number" id="marks">
+
+    <input type="button" id="btn" value="Show Result">
+
+    <script>
+        const marksField = document.getElementById('marks');
+        const btn = document.getElementById('btn');
+
+        const showResult = () => {
+            let marks = marksField.value;
+
+            if(marks < 0) {
+                console.log('Marks can\'t be less than 0'); 
+            } else if(marks > 100) {
+                console.log('Marks can\'t be greater than 100');                
+            } else {
+                if(marks >= 75) {
+                    console.log('Distinction');
+                } else if(marks >= 60) {
+                    console.log('First Division');
+                } else if(marks >= 55) {
+                    console.log('Second Division');
+                } else if(marks >= 33) {
+                    console.log('Third Division');
+                } else {
+                    console.log('Fail');
+                }
+            }             
+        };
+
+        btn.onclick = showResult;
+    </script>
+</body>
+</html>

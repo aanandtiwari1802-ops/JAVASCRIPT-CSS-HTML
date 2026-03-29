@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index page</h1>
+
+    <hr>
+
+    <script>
+        let marks = 45;
+
+        let r = marks >= 75 
+                    ? 'Distinction' 
+                    : marks >= 60 
+                        ? 'First Division' 
+                        : marks >= 55 
+                            ? 'Second Division' 
+                            : marks >= 33 
+                                ? 'Third Division' 
+                                : 'Fail';
+
+        console.log(r);
+    </script>
+</body>
+</html>

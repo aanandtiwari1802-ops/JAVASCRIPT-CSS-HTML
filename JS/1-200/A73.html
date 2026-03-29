@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Some Text</h1>
+
+    <hr>
+
+    <script>        
+
+        if(12 < 13) {
+            //inside a block scope
+            var a = 23;
+            let b = 24;
+            const c = 25;
+        }
+
+        console.log(a);
+        console.log(b);   // Uncaught ReferenceError: b is not defined
+        console.log(c);   // Uncaught ReferenceError: c is not defined
+
+         
+    </script>
+</body>
+</html>

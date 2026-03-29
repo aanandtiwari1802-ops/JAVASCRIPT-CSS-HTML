@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><input type="text" id="nm"></p>
+    <p><input type="number" id="ag"></p>
+    <p><input type="text" id="mk"></p>
+
+    <script>
+        const x = {name: 'raghav', age: 18, marks: 89.77};
+
+        console.log(x);
+
+        const y = document.querySelectorAll('input');
+        let i = 0;
+
+        // for-of: for index-value pair ... ex: Array, HTMLCollection, NodeList
+        // for-in: for key(property)-value pair .... ex: Object
+        for(let prop in x) {
+            x[prop] = y[i].value;
+        }
+
+        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+        console.log(x);
+    </script>
+</body>
+</html>

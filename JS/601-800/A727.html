@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        function User() {
+            // this.info = function() {
+            //     console.log('Hi');
+            // };
+        }
+
+        User.prototype.info = function() {
+                console.log('Hi');
+            };
+
+        function Student() {
+            // this.pro = function() {
+            //     console.log('Hello');
+            // };
+        }
+
+        // Student.prototype.__proto__ = User; // NOT OK
+        Student.prototype.__proto__ = User.prototype;  // OK
+        
+        Student.prototype.pro = function() {
+                console.log('Hello');
+            };
+
+        const a = new Student();
+
+        console.log(a);
+
+        // a.pro();
+        // a.info();
+    </script>
+</body>
+</html>

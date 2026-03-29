@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="x" class="a b c d">
+        some text
+    </p>    
+
+    <script>
+        const x = document.querySelector('#x');
+
+        // old
+        let a = x.className;
+        console.log(a, typeof a);
+
+        // new
+        let b = x.classList;
+        console.log(b, typeof b);
+    </script>
+</body>
+</html>
+

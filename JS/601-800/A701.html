@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        class User {
+            constructor(name, age, email) {
+                console.log('~~~~~~~~~~~~~~~~~~~~');
+                this.name = name;
+                this.age = age;
+                this.email = email;
+            }
+        }
+
+        class Student extends User {
+            constructor(name, age, email, degree, branch, semester) {
+                super(name, age, email);
+                // this.name = name;
+                // this.age = age;
+                // this.email = email;
+                this.degree = degree;
+                this.branch = branch;
+                this.semester = semester;
+            }
+        }
+
+        class Teacher extends User {
+            constructor(name, age, email, qualification, experience, salary) {
+                super(name, age, email);
+                // this.name = name;
+                // this.age = age;
+                // this.email = email;
+                this.qualification = qualification;
+                this.experience = experience;
+                this.salary = salary;
+            }
+        }
+
+        const x = new Student('Ram', 23, 'ram@gmail.com', 'MTech', 'CS', '1st');
+        const y = new Teacher('Mr Prabhakar', 57, 'prabha@gmail.com', 'MTech', 13, 92000);
+
+        console.log(x);
+        console.log(y);
+
+    </script>
+</body>
+</html>

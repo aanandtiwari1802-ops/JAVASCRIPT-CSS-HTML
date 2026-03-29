@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input {
+            font-size: 22px;
+            font-weight: bold;
+            padding: 8px 12px; 
+            border: 1px solid #444;
+            border-radius: 5px;           
+        }
+
+        .b {
+            color: #444;
+        }
+
+        .g {
+            box-shadow: 5px 5px 10px green;
+            color: green;
+            border-color: green;
+        }
+
+        .r {
+            box-shadow: 5px 5px 10px red;
+            color: red;
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <input type="text" id="a" class="b">
+
+    <script>
+        const a = document.querySelector('#a');
+        let flag = true;
+
+        a.addEventListener('focus', () => {
+            if(flag)
+                a.classList.replace('b', 'g');
+            else {
+                a.classList.replace('r', 'g');
+                flag = true;
+            }
+
+        });
+
+        a.addEventListener('blur', () => {
+            // min 5 characters expected
+            if(a.value.length > 4)
+                a.classList.replace('g', 'b');
+            else {
+                a.classList.replace('g', 'r');
+                flag = false;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <input type="number" placeholder="Enter First Number" id="inp1">
+    <input type="number" placeholder="Enter Second Number" id="inp2">
+
+    <br><br>
+
+    <input type="button" value="Add two Numbers" id="btn">
+
+    <script>
+        const inp1 = document.querySelector('#inp1');
+        const inp2 = document.querySelector('#inp2');
+
+        const btn = document.querySelector('#btn');
+
+        const add = (a, b) => {
+            console.log('function called.. for input: ', a, b);
+            return a + b;
+        };
+
+        btn.addEventListener('click', () => {
+            let result = add(+inp1.value, +inp2.value);
+            console.log(result);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        
+        let re = /^0[xX][0-9a-f]{3,}$/;   // \d and [0-9]   
+        
+        console.log(re.test('0X78j95'));
+        console.log(re.test('0x78a957'));
+        console.log(re.test('0xabc'));
+        console.log(re.test('0x7f'));
+        console.log(re.test('0x7fec7879797797987'));
+        console.log(re.test('0x7fec787979779x7987'));
+    </script>
+</body>
+</html>

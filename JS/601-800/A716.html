@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        function Student(name, age, college) {
+            this.name = name;
+            this.age = age;
+            this.college = college;
+            
+            this.login = function() {
+                console.log('Logged In');
+            };
+        }
+
+        const x = new Student('Bipin', 23, 'Global');
+
+        console.log(x.name);
+        x.login();
+        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+        console.log(x);
+        
+    </script>
+</body>
+</html>

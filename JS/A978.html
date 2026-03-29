@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="email"> <br>
+
+    <button type="button" id="btn">Click Me</button>
+
+
+    <script>
+        const email = document.querySelector("#email");
+        const btn = document.querySelector("#btn");
+
+        // single digit test
+        btn.addEventListener('click', (e) => {
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if(emailPattern.test(email.value)) {
+                alert('Success')
+            } else {
+                alert('failed')
+            }
+        });
+
+    </script>
+</body>
+</html>

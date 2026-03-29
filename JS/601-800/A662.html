@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = {
+                    name: 'deepak', 
+                    age: 21, 
+                    college: 'iitdm',
+                    login() {
+                        console.log('the user is logged in... ****');
+                    },
+                    logout() {
+                        console.log('the user is logged out... ****');
+                    }
+                  };
+
+        for(let prop in x) {
+            if((typeof x[prop]) == 'function') {
+                console.log('Hello')
+            } else {
+                console.log('Hi')
+            }          
+        }
+    </script>
+</body>
+</html>

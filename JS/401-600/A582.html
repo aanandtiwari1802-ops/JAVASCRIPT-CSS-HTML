@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #x {
+            border: 4px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <div class="x"></div>
+
+    <script>
+        const obj = {name: 'yamraj', age: 10000, salary: 'gold', place: 'yamlok'};
+
+        console.log(obj);
+
+        console.log('~~~~~~~~~~~~~~~~~~')
+
+        console.log(obj['name'], obj.name);
+        console.log(obj['age'], obj.age);
+        console.log(obj['salary'], obj.salary);
+        console.log(obj['place'], obj.place);
+
+        console.log('~~~~~~~~~~~~~~~~~~')
+
+        for(let prop in obj) {
+            // console.log(prop, typeof prop);
+            // console.log(prop, obj.prop);
+            // console.log(prop, obj['prop']);
+            console.log(prop, obj[prop]);
+        } 
+    </script>
+</body>
+</html>

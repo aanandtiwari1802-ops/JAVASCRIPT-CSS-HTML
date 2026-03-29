@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index page</h1>
+
+    <hr>
+
+    <input type="search" placeholder="Enter Search Key" id="inp">
+
+    
+    <script>
+        // the start of throttling....
+        const inp = document.querySelector('#inp');
+
+        let i = 0;
+        const networkRequest = () => {
+            console.log(i++, 'Request...', inp.value);
+        };
+
+        inp.addEventListener('keyup', () => {
+            networkRequest();
+        });
+    </script>
+</body>
+</html>

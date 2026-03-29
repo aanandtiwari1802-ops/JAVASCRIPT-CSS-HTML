@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <form action="#">
+        <input type="text" name="name" id="name" placeholder="Enter User Name"> <br><br>
+        <input type="email" name="email" id="email" placeholder="Enter Valid Email"> <br><br>
+        <input type="text" name="college" id="college" placeholder="Enter Your College"> <br><br>
+        <input type="text" name="degree" id="degree" placeholder="Enter Your Degree"> <br><br>
+        <input type="button" value="Store" id="btn">
+        <input type="reset">
+    </form>
+
+    <script>
+        const btn = document.querySelector('#btn');
+        const name = document.querySelector('#name');
+        const email = document.querySelector('#email');
+        const college = document.querySelector('#college');
+        const degree = document.querySelector('#degree');
+
+        // let i = 0;
+        btn.addEventListener('click', () => {
+            const obj = {name: name.value, email: email.value, college: college.value, degree: degree.value};
+
+            // localStorage.setItem('rec'+i, JSON.stringify(obj));
+            localStorage.setItem('rec'+localStorage.length, JSON.stringify(obj));
+            // i++;
+        });
+    </script>
+</body>
+</html>

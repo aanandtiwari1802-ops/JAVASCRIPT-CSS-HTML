@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = [78, 45, 7, 12, 23, 7, 11, 54, 63, 7, 44, 37, 88, 7, 102, 56, 39, 7];
+       
+        
+        console.log(x.lastIndexOf(7));  // found at 17
+        console.log(x.lastIndexOf(7, 16)); // found at 13
+        console.log(x.lastIndexOf(7, 12)); // found at 9
+        console.log(x.lastIndexOf(7, 12)); // found at 5
+        console.log(x.lastIndexOf(7, 4)); // found at 2
+        console.log(x.lastIndexOf(7, 1)); // not found: -1
+
+    </script>
+</body>
+</html>

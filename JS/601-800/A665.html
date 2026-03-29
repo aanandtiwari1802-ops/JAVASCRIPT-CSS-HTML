@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = {
+                    student_name: 'goutam', 
+                    age: 24, 
+                    college: 'nalanda',
+                    showInfo() {
+                        console.log(this.student_name, this.age, this.college);
+                    }
+                  };
+
+        x.showInfo();          
+       
+        
+        // Uncaught ReferenceError: college is not defined
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = {name: 'raghav', age: 18, marks: 89.77, areyouok: false};
+
+        console.log(x);
+
+        // for-of: for index-value pair ... ex: Array, HTMLCollection, NodeList
+        // for-in: for key(property)-value pair .... ex: Object
+        for(let prop in x) {
+            // console.log(prop, x['prop']);
+            console.log(prop, x[prop]);
+        }
+    </script>
+</body>
+</html>

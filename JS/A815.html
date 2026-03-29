@@ -1,0 +1,75 @@
+<!-- pixabay.com -->
+<!-- click on join button at top-right corner  -->
+<!-- create an account  -->
+<!-- click on login button at top-right corner  -->
+<!-- Site Map at the bottom-right find the 'API' link in about section  -->
+<!-- Click over 'View API Documentation' Button at the center of the page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Photo Library</h1>
+
+    <hr>
+
+    <input type="text" id="q">
+    <input type="button" value="Show Images" id="btn">
+
+    <div id="container">
+        <div class="row" id="box">
+            
+        </div>
+    </div>
+
+    <script>
+        // https://pixabay.com/api/?key=51825027-d3f6e812d17a24dcb6a008acf&q=yellow+flowers&image_type=photo
+
+        const q = document.querySelector('#q');
+        const btn = document.querySelector('#btn');
+        const box = document.querySelector('#box');
+
+        const sendRequest = () => {
+            box.innerHTML = '';
+            
+            const req = new XMLHttpRequest();
+    
+            req.open('GET', 'https://pixabay.com/api/?key=51825027-d3f6e812d17a24dcb6a008acf&q='+q.value+'&image_type=photo', true);
+    
+            req.addEventListener('readystatechange', () => {
+                if(req.readyState == 4 && req.status == 200) {    
+                    const obj = JSON.parse(req.responseText);
+
+                    const arr = obj.hits;
+
+                    for(let nxObj of arr) {
+                        const col = document.createElement('div'); 
+                        col.classList.add('col');
+                        const div = document.createElement('div'); 
+                        div.classList.add('p-2');
+                        div.classList.add('card');
+                        div.classList.add('rounded');
+                        div.classList.add('mb-3');
+                        div.style.width = '18rem';
+                        const img = document.createElement('img');
+                        img.classList.add('card-img-top');
+                        img.src = nxObj.webformatURL;
+                        div.append(img);
+                        col.append(div);
+                        box.append(col);        
+                    }
+                }
+            });
+    
+            req.send();
+        };
+
+        btn.addEventListener('click', sendRequest);
+    </script>
+</body>
+</html>

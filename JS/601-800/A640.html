@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Index PAge</h2>
+
+    <hr>
+
+    <script>
+        // const arr = [{name: 'vinay', age: 19, college: 'global'}, {name: 'pranay', age: 18, college: 'jec'}, {name: 'megha', 'age': 21, college: 'srit'}];
+        
+        const arr = [
+                        {name: 'vinay', age: 19, college: 'global'}, 
+                        {name: 'pranay', age: 18, college: 'jec'}, 
+                        {name: 'megha', 'age': 21, college: 'srit'}
+                    ];
+
+        for(let nextObj of arr) {
+            for(let nextKey in nextObj) {
+                console.log(nextKey, ':', nextObj[nextKey]);
+            }
+            console.log('~~~~~~~~~~~~~~~~~~');
+        }
+
+    </script>
+</body>
+</html>

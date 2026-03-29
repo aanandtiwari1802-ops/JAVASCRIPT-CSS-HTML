@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="x" class="a b c d">
+        some text
+    </p>    
+
+    <button id="a">Add</button>
+    <button id="b">Remove</button>
+    <button id="c">Replace</button>
+
+    <script>
+        const x = document.querySelector('#x');
+
+        const a = document.querySelector('#a');
+        const b = document.querySelector('#b');
+        const c = document.querySelector('#c');
+
+        a.addEventListener('click', () => {
+            x.classList.add('golu');
+        });
+
+        b.addEventListener('click', () => {
+            x.classList.remove('d');
+        });
+
+        c.addEventListener('click', () => {
+            x.classList.replace('golu', 'bablu');
+        });
+    </script>
+</body>
+</html>
+

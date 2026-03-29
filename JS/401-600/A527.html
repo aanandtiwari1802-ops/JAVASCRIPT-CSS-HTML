@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet <strong id="x">consectetur adipisicing elit</strong>. Repudiandae, assumenda quisquam fugit iste harum corrupti. Corrupti aliquid nesciunt repudiandae quo?
+        </p>
+    </div>
+
+    <script>
+        const x = document.querySelector('#x');
+
+        console.log(x);
+
+        const y = x.parentNode;
+
+        console.log(y);
+
+        const z = y.parentNode;
+
+        console.log(z);
+
+        const a = z.parentNode;
+
+        console.log(a);
+
+        const b = a.parentNode;
+
+        console.log(b);
+
+        const c = b.parentNode;
+
+        console.log(c)
+
+        const d = c.parentNode;
+
+        console.log(d);
+    </script>
+</body>
+</html>

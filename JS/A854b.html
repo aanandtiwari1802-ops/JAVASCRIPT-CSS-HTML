@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <table align="center" width="50%" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>UserId</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+
+        <tbody id="records">
+            
+        </tbody>
+    </table>
+
+    <button type="button" id="btn">Click Me</button>
+
+    <hr>
+    
+
+    <script>         
+        // hint: check the order of the output records
+        
+        // let url = 'https://jsonplaceholder.typicode.com/todos/';
+        let url = 'https://jsonplaceholder.typicode.co.in/todos/';
+
+        const networkRequest = async (url) => {            
+            const response = await fetch(url);    
+            return await response.json();
+        };        
+
+        
+        const records = document.querySelector('#records');
+
+        const btn = document.querySelector('#btn');
+
+        let rowIndex = 0;
+        const handleRecordResponse = (obj) => {
+            const row = records.insertRow(rowIndex++);
+            let cellIndex = 0;
+            for(let prop in obj) {
+                const cell = row.insertCell(cellIndex++);
+                cell.innerText = obj[prop];
+            }
+        };
+
+        
+        let i = 1; 
+        btn.addEventListener('click', ()=>{
+            records.innerHTML = '';
+            rowIndex = 0;
+            
+            
+            networkRequest('https://jsonplaceholder.typicode.com/todos/' + i++).then((data)=>{
+                handleRecordResponse(data);  
+                
+                return networkRequest('https://jsonplaceholder.typicode.com/todos/' + i++);
+            }).then((data)=>{
+                handleRecordResponse(data);  
+                
+                return networkRequest(url + i++);              
+            }).then((data)=>{
+                handleRecordResponse(data);                  
+                         
+            }).catch((error)=>{
+                console.log(error, 'All in one ----- ');
+            });
+            
+        });
+    </script>
+</body>
+</html>
+

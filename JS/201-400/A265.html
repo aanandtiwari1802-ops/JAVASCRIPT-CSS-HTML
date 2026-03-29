@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    Press 1 for Hindi and 2 for English and 3 for Tamil:
+    <input type="number" id="a"> <br><br>
+    
+    Press 1 for Phone and 2 for Mobile and 3 for Internet:
+    <input type="number" id="b"> <br><br>
+
+    <input type="button" id="btn" value="Save">
+
+    <script>
+        const a = document.getElementById('a');
+        const b = document.getElementById('b');
+        
+        const btn = document.getElementById('btn');
+
+        function act() {
+            let language = parseInt(a.value);
+            let product = parseInt(b.value);
+
+            switch(language) {
+                case 1:
+                    switch(product) {
+                        case 1:
+                            console.log('Apki Phone samasya ka samadhan')
+                            break;
+                        case 2:
+                            console.log('Apki Mobile samasya ka samadhan')
+                            break;
+                        case 3:
+                            console.log('Apki Internet samasya ka samadhan')
+                            break;
+                        default: 
+                            console.log('Galat Chunav!');
+                    }
+                    break;
+                case 2:
+                    switch(product) {
+                        case 1:
+                            console.log('A solution to your phone related Problem')
+                            break;
+                        case 2:
+                            console.log('A solution to your mobile related Problem')
+                            break;
+                        case 3:
+                            console.log('A solution to your Internet related Problem')
+                            break;
+                        default: 
+                            console.log('Invalid Choice!');
+                    }
+                    break;
+                case 3:
+                    switch(product) {
+                        case 1:
+                            console.log('El Phone Patt Nal Mula')
+                            break;
+                        case 2:
+                            console.log('El Mobile Patt Nal Mula')
+                            break;
+                        case 3:
+                            console.log('El Internet Patt Nal Mula')
+                            break;
+                        default: 
+                            console.log('Vaddakam!');
+                    }
+                    break;
+                default: 
+                    console.log('Invalid Input!');
+            }
+        }
+
+        btn.onclick = act; 
+    </script>
+</body>
+</html>

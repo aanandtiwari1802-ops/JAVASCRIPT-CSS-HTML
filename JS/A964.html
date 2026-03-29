@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #a {
+            border: 3px solid black;
+            width: 1100px;
+            margin: 100px auto;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">The Java Platform, Standard Edition (Java SE) APIs define the core Java platform for general-purpose computing.</div>
+
+    <script>
+        const a = document.querySelector('#a');
+
+        let str = a.innerText;
+
+        let intv = null;
+
+        const startAction = () => {
+            intv = setInterval(()=>{
+                        str = str.substring(1) + str[0] 
+                        a.innerText = str;
+                    }, 200);
+        };  
+        
+        startAction();
+
+        a.addEventListener('mouseover', () => {
+            clearInterval(intv);
+        });
+
+        a.addEventListener('mouseout', () => {
+            startAction()
+        });
+    </script>
+</body>
+</html>

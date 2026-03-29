@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        //--------- x ------------
+        let re = /^[6-9]\d\d\d\d\d\d\d\d\d$/;   
+        
+        console.log(re.test('99778865'));
+        console.log(re.test('9972886597'));
+        console.log(re.test('2977886597'));
+        console.log(re.test('99778865a7'));
+        console.log(re.test('99778865799'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 50px 50px;
+        }
+
+        #a {
+            border: 3px solid red;
+            width: 600px;
+            height: 500px;
+            margin: 100px 200px;
+        }
+
+        #x {
+            font-size: 24px;
+            font-weight:  bold;
+            border: 2px solid green;
+            padding: 6px 12px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <span id="x" draggable="true">Mohan</span>
+
+    <div id="a"></div>
+
+    <script>
+        const x = document.querySelector('#x');
+        const a = document.querySelector('#a');
+
+        x.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('abc', e.target.id);
+        });
+
+        a.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        a.addEventListener('drop', (e) => {
+            e.preventDefault();
+            let id = e.dataTransfer.getData('abc');
+            let t = document.getElementById(id)
+            console.log(t)
+            e.target.append(t);
+        });
+    </script>
+</body>
+</html>

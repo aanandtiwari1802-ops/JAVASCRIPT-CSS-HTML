@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="x" class="a b c d">
+        some text
+    </p>    
+
+    <script>
+        const x = document.querySelector('#x');
+
+        let b = x.classList;
+        console.log(b);
+        
+        x.classList.replace('b', 'y');
+
+        console.log(b);
+    </script>
+</body>
+</html>
+

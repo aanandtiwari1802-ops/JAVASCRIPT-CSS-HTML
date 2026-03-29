@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box {
+            position: relative;
+        }
+
+        #sh {
+            /* border: 1px solid #333; */
+            height: 200px;
+            width: 4px;
+            position: absolute;
+            left: 750px;
+            top: 100px;
+        }
+
+        #sh_inner {
+            border: 1px solid red;
+            height: 100px;
+        }
+        
+        #mh {
+            /* border: 1px solid green; */
+            height: 200px;
+            width: 2px;
+            position: absolute;
+            left: 750px;
+            top: 100px;
+        }
+
+        #mh_inner {
+            border: 1px solid #333;
+            height: 100px;
+        }
+        
+        #hh {
+            /* border: 1px solid green; */
+            height: 200px;
+            width: 4px;
+            position: absolute;
+            left: 750px;
+            top: 100px;
+        }
+
+        #hh_inner {
+            border: 1px solid green;
+            background-color: green;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <img src="clock.png" width="200" id="clk">
+        <div id="sh">
+            <div id="sh_inner"></div>
+        </div>
+
+        <div id="mh">
+            <div id="mh_inner"></div>
+        </div>
+        
+        <div id="hh">
+            <div id="hh_inner"></div>
+        </div>
+    </div>
+
+    <script>
+        const sh = document.querySelector('#sh');
+        const mh = document.querySelector('#mh');
+        const hh = document.querySelector('#hh');
+
+        let shDeg = 0;
+        let mhDeg = 0;
+        let hhDeg = 0;
+
+        setInterval(() => {
+            shDeg += 6;
+            if(shDeg == 360) {
+                shDeg = 0;
+                mhDeg += 6;
+                if(mhDeg % 12 == 0) {
+                    hhDeg += 1;
+                    hhDeg.style.rotate = hhDeg+'deg';
+                }
+                if(mhDeg == 360) {
+                    mhDeg = 0;
+                }
+                mh.style.rotate = mhDeg+'deg';
+            }
+            sh.style.rotate = shDeg+'deg';
+        }, 1000);
+    </script>
+</body>
+</html>

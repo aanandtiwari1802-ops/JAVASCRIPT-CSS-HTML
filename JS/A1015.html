@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: verdana;
+        }
+
+        #tbl {
+            border: 1px solid #444; 
+            padding: 10px;
+            border-radius: 10px;
+            margin: 50px auto;
+            background-color: #eee;
+            box-shadow: 7px 7px 20px #888;
+        }
+
+        .a {
+            text-align: right;
+        }
+
+        input {
+            font-size: 22px;
+            padding: 8px 14px;
+            border-radius: 7px;
+            border: 1px solid #444;
+        }
+
+        label {
+            font-size: 22px;
+        }
+
+        tr {
+            height: 60px;
+        }
+
+        button {
+            font-size: 24px;
+            background-color: rgb(19, 103, 219);
+            color: white;
+            padding: 8px 14px;
+            border-radius: 7px;
+            border: 1px solid rgb(19, 103, 219);
+            cursor: pointer;
+        }
+
+        #err_msg {
+            width: 20%;
+            background-color: rgb(204, 22, 22);
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            padding: 8px 14px;
+            margin: 10px auto;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="err_msg">Some Error</div>
+    <form action="">
+        <table id="tbl" cellpadding="5">
+            <tr>
+                <td width="40%" class="a"><label for="unm">User Name</label>:</td>
+                <td width="60%"><input type="text" id="unm"></td>
+            </tr>
+            <tr>
+                <td class="a"><label for="eml">Email</label>:</td>
+                <td><input type="text" id="eml"></td>
+            </tr>
+            <tr>
+                <td class="a"><label for="pwd">Password</label>:</td>
+                <td><input type="password" id="pwd"></td>
+            </tr>
+            <tr>
+                <td class="a"><label for="ph">Phone</label>:</td>
+                <td><input type="tel" id="ph"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button type="submit">SignUp</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        const unm = document.querySelector('#unm');
+        const eml = document.querySelector('#eml');
+        const pwd = document.querySelector('#pwd');
+        const ph  = document.querySelector('#ph');
+
+        const err_msg = document.querySelector('#err_msg');
+
+        const userNamePattern = /^[A-Za-z ]{5,30}$/;
+
+        unm.addEventListener('blur', () => {
+            if(!userNamePattern.test(unm.value)) {
+                err_msg.style.display = 'block';
+                err_msg.innerText = 'Invalid User Name...';
+                setTimeout(() => {
+                    err_msg.style.display = 'none';
+                    err_msg.innerText = 'Some Error';
+                }, 4000);
+            } 
+        });
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        eml.addEventListener('blur', () => {
+            if(!emailPattern.test(eml.value)) {
+                err_msg.style.display = 'block';
+                err_msg.innerText = 'Invalid Email...';
+                setTimeout(() => {
+                    err_msg.style.display = 'none';
+                    err_msg.innerText = 'Some Error';
+                } , 4000);
+            }
+        });
+        
+        const passwordPattern = /^[a-zA-Z0-9_#]{8,16}$/;
+        pwd.addEventListener('blur', () => {
+            if(!passwordPattern.test(pwd.value)) {
+                err_msg.style.display = 'block';
+                err_msg.innerText = 'Invalid Password...';
+                setTimeout(() => {
+                    err_msg.style.display = 'none';
+                    err_msg.innerText = 'Some Error';
+                } , 4000);
+            }
+        });
+        
+        const phonePattern = /^[6-9][0-9]{9}$/;
+        ph.addEventListener('blur', () => {
+            if(!phonePattern.test(ph.value)) {
+                err_msg.style.display = 'block';
+                err_msg.innerText = 'Invalid Phone...';
+                setTimeout(() => {
+                    err_msg.style.display = 'none';
+                    err_msg.innerText = 'Some Error';
+                } , 4000);
+            }
+        });
+    </script>
+</body>
+</html>

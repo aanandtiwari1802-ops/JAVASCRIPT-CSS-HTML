@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: verdana;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <form action="A35.html">
+        <table border="1" align="center" cellpadding="8">
+            <tr>
+                <th align="right" width="40%">
+                    <label for="u_name">User Name</label> : 
+                </th>
+                <td width="60%">
+                    <input type="text" value="Yamraj" name="u_name" id="u_name" maxlength="10" minlength="3" placeholder="Please Enter Your Full Name">
+                </td>
+            </tr>
+            <tr>
+                <th align="right">
+                    <label for="marks">Marks</label> : 
+                </th>
+                <td>
+                    <input type="number" name="marks" min="22" max="100" id="marks">
+                </td>
+            </tr>
+            <tr>
+                <th align="right">
+                    <label for="u_email">Email</label> : 
+                </th>
+                <td>
+                    <input type="email" name="u_email" id="u_email" placeholder="Enter Valid Email">
+                </td>
+            </tr>
+            <tr>
+                <th align="right">
+                    <label for="u_pass">Password</label> : 
+                </th>
+                <td>
+                    <input type="password" name="u_pass" id="u_pass" placeholder="Enter Valid Password">
+                    <img src="images/eye.png" width="22" id="pvisible">
+                </td>
+            </tr>
+            <tr>
+                <th align="right">
+                    Gender : 
+                </th>
+                <td>
+                    <label for="u_gen_m">M</label>
+                    <input type="radio" name="u_gen" id="u_gen_m" value="Male">
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    <label for="u_gen_f">F</label>
+                    <input type="radio" name="u_gen" id="u_gen_f" checked value="Female">
+                </td>
+            </tr>
+            <tr>
+                <th align="right">
+                    Food Choices :  <br>
+                    <small style="font-size:.7em;color:#777">Select food of your choice</small>
+                </th>
+                <td>
+                    Jalebi : <input type="checkbox" name="food" value="Jalebi"> &nbsp;&nbsp;&nbsp;&nbsp;
+                    Samosa : <input type="checkbox" name="food" value="Samosa"> <br>
+                    Kachodi : <input type="checkbox" name="food" value="Kachodi" > &nbsp;&nbsp;&nbsp;&nbsp;
+                    Poha : <input type="checkbox" name="food" value="Poha"> 
+                </td>
+            </tr>
+            <tr>
+                <th align="right">
+                    <label for="u_msg">Message</label> : 
+                </th>
+                <td>
+                    <!--<input type="text" name="u_msg" id="u_msg">-->
+                    <textarea name="u_msg" id="u_msg" placeholder="Enter About You"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th align="right">
+                    <label for="u_city">City</label> : 
+                </th>
+                <td>
+                    <!--<input type="text" name="u_city" id="u_city">-->
+                    <select name="u_city" id="u_city" multiple size="5">
+                        <option>Jabalpur</option>
+                        <option selected>Bhopal</option>
+                        <option>Gwalior</option>
+                        <option>Indore</option>
+                        <option selected>Itarsi</option>
+                        <option>Satna</option>
+                        <option>Rewa</option>
+                        <option>Panna</option>
+                        <option>Raipur</option>
+                        <option>Surat</option>
+                        <option>Ahmdabad</option>
+                        <option>Nagpur</option>
+                        <option>Kanpur</option>
+                        <option>Hoshangabad</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th align="right">
+                    <label for="rank">Rank</label> : 
+                </th>
+                <td>
+                    10 <input type="range" name="rank" min="10" max="20" step="2" id="rank"> 20
+                </td>
+            </tr>
+            <tr>
+                <th align="right">
+                    <label for="dob">DOB</label> : 
+                </th>
+                <td>
+                    <input type="date" name="dob" id="dob">
+                </td>    
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset">
+                    <input type="submit" value="SignUp">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        let pvisible = document.getElementById('pvisible');
+        let u_pass = document.getElementById('u_pass');
+
+        let flag = false;
+        pvisible.addEventListener('click', ()=>{
+            if(flag) {
+                u_pass.type = 'password';
+                flag = false;
+            } else {
+                u_pass.type = 'text';
+                flag = true;
+            }
+
+        });
+    </script>
+</body>
+</html>

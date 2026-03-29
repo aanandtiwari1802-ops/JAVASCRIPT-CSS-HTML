@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = new Object();
+
+        x['name'] = 'hitesh';
+        x['company'] = 'infosys';
+        x['salary'] = 45000;
+
+        for(let nextKey in x) {
+            console.log(nextKey, ':', x[nextKey]);
+        }
+
+    </script>
+</body>
+</html>

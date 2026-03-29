@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #a {
+            border: 3px solid black;
+            width: 1100px;
+            margin: 100px auto;
+            font-size: 24px;
+        }
+
+        #x, #y {
+            border: 2px solid black;
+            padding: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;    
+        }
+    </style>
+</head>
+<body>
+    <div id="a">The Java Platform, Standard Edition (Java SE) APIs define the core Java platform for general-purpose computing.</div>
+
+    <div style="margin-top: 10px;">
+        <span id="x">-</span> . . . . . <span id="y">+</span>    
+    </div>
+
+    <script>
+        const a = document.querySelector('#a');
+        const x = document.querySelector('#x');
+        const y = document.querySelector('#y');
+
+        let str = a.innerText;
+
+        let intv = null;
+
+        let speed = 200;
+
+        const startAction = (speed) => {
+            intv = setInterval(()=>{
+                        str = str.substring(1) + str[0] 
+                        a.innerText = str;
+                    }, speed);
+        };  
+        
+        startAction(speed);
+
+        a.addEventListener('mouseover', () => {
+            clearInterval(intv);
+        });
+
+        a.addEventListener('mouseout', () => {
+            startAction(speed);
+        });
+
+        x.addEventListener('click', () => {
+            clearInterval(intv)
+            speed += 100;
+            console.log(speed)
+            startAction(speed);
+        });
+
+        y.addEventListener('click', () => {
+            if(speed-100 >= 100) {
+                clearInterval(intv)
+                speed -= 100;
+                console.log(speed)
+                startAction(speed)
+            }
+        });
+    </script>
+</body>
+</html>

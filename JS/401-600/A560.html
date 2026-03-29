@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            margin-left: 20px;
+            font-size: 22px;
+            padding: 5px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="border">Border</button>
+    <button id="height">Height</button>
+    <button id="padding">Padding</button>
+    <button id="radius">Border Radius</button>
+    <button id="shadow">Box Shadow</button>
+    
+    <br><br>
+    
+    <img src="nobita.jpg" id="x">
+
+
+
+    <script>
+        const x = document.querySelector('#x');
+
+        const border = document.querySelector('#border');
+        const height = document.querySelector('#height');
+        const padding = document.querySelector('#padding');
+        const radius = document.querySelector('#radius');
+        const shadow = document.querySelector('#shadow');
+        
+        border.addEventListener('click', () => {
+            x.style += 'border: 3px solid red;';
+        });
+
+        height.addEventListener('click', () => {
+            x.style += 'height: 400px;';
+        });
+
+        padding.addEventListener('click', () => {
+            x.style += 'padding: 10px;';
+        });
+
+        radius.addEventListener('click', () => {
+            x.style += 'border-radius: 10px;';
+        });
+
+        shadow.addEventListener('click', () => {
+            x.style += 'box-shadow: 10px 10px 25px red;';
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!-- style="border: 3px solid red;height: 400px;padding: 10px;border-radius: 10px;box-shadow: 10px 10px 25px red" -->

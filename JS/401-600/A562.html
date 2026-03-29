@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            margin-left: 20px;
+            font-size: 22px;
+            padding: 5px 12px;
+            cursor: pointer;
+        }
+
+        .all {
+            border: 3px solid red;
+            height: 400px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 25px red;
+        }
+    </style>
+</head>
+<body>
+    <button id="change">Change Style</button>
+    
+    <br><br>
+    
+    <img src="nobita.jpg" id="x">
+
+
+
+    <script>
+        const x = document.querySelector('#x');
+
+        const change = document.querySelector('#change');
+        
+        change.addEventListener('click', () => {
+            x.class = 'all';
+        });
+    </script>
+</body>
+</html>
+
+
+
+<!-- style="border: 3px solid red;height: 400px;padding: 10px;border-radius: 10px;box-shadow: 10px 10px 25px red" -->

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="x">Some <strong>More</strong> text</p>
+    
+    <button id="btn">Action</button>
+
+    <script>
+        const x = document.querySelector('#x');
+        const btn = document.querySelector('#btn');
+
+        console.log(x.innerHTML);
+        
+
+        btn.addEventListener('click', () => {
+            // x.innerText = 'Some <i>Imp</i> Info'
+            x.innerHTML = 'Some <i>Imp</i> Info';
+
+            console.log(x.innerHTML);
+        });
+    </script>
+</body>
+</html>

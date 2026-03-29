@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Hello Doston</h1>
+
+    <hr>
+
+    <script>
+        function aaa(z) {
+            console.log(z, 'aaa()');
+            return z;
+        }
+        
+        function bbb(y) {
+            console.log(y, 'bbb()');
+            return y;
+        }
+        
+        function ccc(x) {
+            console.log(x, 'ccc()');
+        }
+
+        bbb(aaa(ccc('om')))
+    </script>    
+</body>
+</html>

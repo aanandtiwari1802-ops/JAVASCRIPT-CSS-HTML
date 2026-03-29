@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        
+        let re = /^0[xX][0-9][0-9][0-9][0-9]$/;   // \d and [0-9]   
+        
+        console.log(re.test('0X7895'));
+        console.log(re.test('0x7895'));
+        console.log(re.test('0X78'));
+    </script>
+</body>
+</html>

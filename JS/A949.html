@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World...</h1>
+
+    <hr>
+
+
+    <select id="x">
+        <option>Select</option>
+        <option>Jabalpur</option>
+        <option>Jaipur</option>
+        <option>Jagdalpur</option>
+        <option>Kanpur</option>
+        <option>Nagpur</option>
+    </select>
+
+    <script>
+        const x = document.querySelector('#x');
+
+        // x.onchange = func; //old
+        //vs
+        x.addEventListener('change', () => {
+            console.log(x.value, '+++++++');
+        }); //modern
+    </script>
+</body>
+</html>

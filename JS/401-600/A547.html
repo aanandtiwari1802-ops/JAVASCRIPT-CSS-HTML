@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="nobita.jpg" height="300">
+
+    <button id="btn">Action</button>
+
+    <script>
+        const x = document.images;
+
+        const btn  = document.querySelector('#btn');
+
+        console.log(x);
+        console.log(x[0]);
+        console.log(x[0].src);
+
+        btn.addEventListener('click', () => {
+            x[0].src = 'sizuka.jpg';
+        });
+    </script>
+</body>
+</html>

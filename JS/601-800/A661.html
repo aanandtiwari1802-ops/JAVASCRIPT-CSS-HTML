@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = {
+                    name: 'deepak', 
+                    age: 21, 
+                    college: 'iitdm',
+                    login() {
+                        console.log('the user is logged in... ****');
+                    },
+                    logout() {
+                        console.log('the user is logged out... ****');
+                    }
+                  };
+
+        console.log(typeof x.name);          
+        console.log(typeof x.age);          
+        console.log(typeof x.college);          
+        console.log(typeof x.login);          
+        
+        if((typeof x.login) == 'function') {
+            console.log('Hello')
+        } else {
+            console.log('Hi')
+        }          
+    </script>
+</body>
+</html>

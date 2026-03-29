@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index pAge</h1>
+
+    <hr>
+
+    <script>
+        const showInfo = function(college,phone) {
+                            console.log(`Name: ${this.name} Age: ${this.age} College: ${college} and Phone: ${phone}`)
+                         };
+
+        const a = {
+                    name: 'om', 
+                    age: 12,
+                    // showInfo: function() {
+                    //     console.log(`Current Object: ${this.name}`)
+                    // }
+                  };
+        
+        const b = {
+                    name: 'raj', 
+                    age: 21,
+                    // showInfo: function() {
+                    //     console.log(`Current Object: ${this.name}`)
+                    // }
+                  };        
+        
+        const c = {
+                    name: 'raju', 
+                    age: 5,
+                    // showInfo: function() {
+                    //     console.log(`Current Object: ${this.name}`)
+                    // }
+                  };
+
+
+        
+        // showInfo.call(a, 'SRIT', '7889876543');
+        // showInfo.call(b, 'JEC', '9589876543');
+        // showInfo.call(c, 'GLOBAL', '8829876543');
+
+        const ar1 = ['SRIT1', '7889876543'];
+        const ar2 = ['JEC1', '9589876543'];
+        const ar3 = ['GLOBAL1', '8829876543']; 
+
+        // showInfo.call(a, ...ar1);   // ar1 => ['SRIT', '7889876543'] but ...ar1 => 'SRIT', '7889876543'
+        // showInfo.call(b, ...ar2);
+        // showInfo.call(c, ...ar3);
+
+        // showInfo.call(a, ar1);  // not ok
+        // showInfo.call(b, ar2);  // not ok
+        // showInfo.call(c, ar3);  // not ok
+        
+        showInfo.apply(a, ar1);
+        showInfo.apply(b, ar2);
+        showInfo.apply(c, ar3);
+    </script>
+</body>
+</html>

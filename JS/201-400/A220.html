@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <input type="button" id="btn" value="Save">
+
+    <script>
+        const btn = document.getElementById('btn');
+
+        function aaa() {
+            console.log('Hi');
+        }
+
+        function bbb() {
+            console.log('Hello');
+        }
+
+        btn.onmouseover = aaa; 
+        btn.onmouseout = bbb; 
+    </script>
+</body>
+</html>

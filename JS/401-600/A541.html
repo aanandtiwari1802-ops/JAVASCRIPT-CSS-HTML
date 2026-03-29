@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="x">Some More text</p>
+    
+    <script>
+        const x = document.querySelector('#x');
+        
+        console.log(x);
+        
+        console.log(x.innerText);
+
+        x.innerText = 'Some Important Information';
+
+        console.log(x.innerText);
+    </script>
+</body>
+</html>

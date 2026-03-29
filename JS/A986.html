@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        let re = /\s/;   // \r\t \n
+        
+        console.log(re.test('mohan is in class 13rd'));
+        console.log(re.test('mohanis'));
+        console.log(re.test('mohan\tis'));
+        console.log(re.test('mohan\ris'));
+        console.log(re.test(''));
+        console.log(re.test('mohan\bis'));
+        console.log(re.test('mohan\nis'));
+    </script>
+</body>
+</html>

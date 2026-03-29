@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <table border="1" width="50%" align="center">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>User Id</th>
+                <th>Title</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody id="records">
+
+        </tbody>
+    </table>
+
+    <input type="button" value="Show Records" id="btn">
+
+    <script>
+        const btn = document.querySelector('#btn');
+        const records = document.querySelector('#records');
+
+        let i = 0;
+
+        const sendRequest = () => {
+            
+            for(n=1;n<=200;n++) {
+                const req = new XMLHttpRequest();
+
+                req.open('GET', 'https://jsonplaceholder.typicode.com/todos/' + n, false);
+    
+                req.addEventListener('readystatechange', () => {
+                    if(req.readyState == 4 && req.status == 200) {
+                        const obj = JSON.parse(req.responseText);
+    
+                        const row = records.insertRow(i++);
+                        let j = 0;
+                        for(let prop in obj) {
+                            const cell = row.insertCell(j++);
+                            cell.innerText = obj[prop];
+                        }
+                    }
+                });
+    
+                req.send(null);
+            }
+        };
+
+        btn.addEventListener('click', sendRequest);
+
+        
+    </script>
+</body>
+</html>

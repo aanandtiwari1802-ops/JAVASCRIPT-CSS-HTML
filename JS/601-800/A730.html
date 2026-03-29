@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        class User {
+            login() {
+
+            }
+
+            constructor(name) {
+                this.name = name;
+            }
+        }
+
+        class Student extends User {
+            checkFeesStatus() {
+
+            }
+
+            constructor(name, fees) {
+                super(name);
+                this.fees = fees;
+            }
+        }
+
+        const x = new Student('Jagdeep', 400);
+
+        // console.log(x);
+        // console.log(x.prototype); // not ok
+        // console.log(x.__proto__);
+        // console.log(x.__proto__.prototype); //not ok
+        // console.log(x.__proto__.__proto__); 
+        console.log(x.__proto__.__proto__.__proto__); 
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <input type="number" id="inp" placeholder="Enter Radius">
+
+    <br><br>
+
+    <input type="button" value="Calculate Area" id="btn">
+
+    <script>
+        const inp = document.querySelector('#inp');
+        const btn = document.querySelector('#btn');
+
+        const pi = 3.14;
+
+        const cache = {};
+
+        const calcCircleArea = (radius) => {
+            console.log('function called... for input', radius);
+            return pi * radius * radius;
+        };
+
+        const optimizedAreaCalculator = (radius) => {
+            const key = radius + '-';
+
+            if(cache[key]) {
+                console.log('cached record... for input', radius);
+                return cache[key];
+            } else {
+                let area = calcCircleArea(radius);
+                cache[key] = area;
+                return area;
+            }
+        }
+
+        btn.addEventListener('click', () => {
+            // calcCircleArea(inp.value);
+            let area = optimizedAreaCalculator(inp.value);
+            console.log(area);
+            
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World...</h1>
+
+    <hr>
+
+    Enter Gender: <input type="radio" id="m" name="gender" value="m"> M &nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" id="f" name="gender" value="f"> F 
+
+    <br><br>
+
+    Enter Age: <input type="number" id="age">
+    
+    <br><br>
+
+    <input type="button" value="Show Result" id="btn">
+
+    <h2 id="r">Result: -</h2>
+
+    <script>
+        const m = document.getElementById('m');
+        const f = document.getElementById('f');
+
+        const a = document.getElementById('age');
+        const btn = document.getElementById('btn');
+        const r = document.getElementById('r');
+
+        let gender;
+        let age;
+
+        function handleOperation() {
+            if(m.checked)
+                gender = 'm';
+            else
+                gender = 'f';
+
+            age = a.value;
+
+            age < 1 || age > 100
+                ? r.innerText = 'Invalid Input'
+                :
+                    gender == 'm' 
+                        ? 
+                            age > 60 
+                                ? r.innerText = 'MB: 2000 and RI: 11%'
+                                : age <= 22
+                                    ? r.innerText = 'MB: 500 and RI: 2%'
+                                    : r.innerText = 'MB: 5000 and RI: 6%'
+                        :                 
+                            age > 60 
+                                ? r.innerText = 'MB: 0 and RI: 12%'
+                                : age <= 22
+                                    ? r.innerText = 'MB: 0 and RI: 4%'
+                                    : r.innerText = 'MB: 2000 and RI: 8%';
+        }
+
+        btn.onclick = handleOperation;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        class A {
+            constructor() {
+                this.abc = 'rahul';
+                this.bcd = 57;
+            }
+
+            a1() {
+
+            }
+
+            a2() {
+
+            }
+        }
+
+        class B extends A {
+            constructor() {
+                this.mno = 'mukesh';
+                this.nop = 23;
+                this.opq = true;
+            }
+            
+            b1() {
+
+            }
+
+            b2() {
+
+            }
+
+            b3() {
+                
+            }
+        }
+
+        const x = new B();
+
+        console.log(x);
+
+        // console.log(A.prototype);
+        // console.log(B.prototype);
+
+
+        // Error:
+        // A687.html:31 Uncaught ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+        // at new B (A687.html:31:17)
+        // at A687.html:49:19
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!-- pixabay.com -->
+<!-- click on join button at top-right corner  -->
+<!-- create an account  -->
+<!-- click on login button at top-right corner  -->
+<!-- Site Map at the bottom-right find the 'API' link in about section  -->
+<!-- Click over 'View API Documentation' Button at the center of the page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Photo Library</h1>
+
+    <hr>
+
+    <input type="text" id="q">
+    <input type="button" value="Show Images" id="btn">
+
+    <div id="box"></div>
+
+    <script>
+        // https://pixabay.com/api/?key=51825027-d3f6e812d17a24dcb6a008acf&q=yellow+flowers&image_type=photo
+
+        const q = document.querySelector('#q');
+        const btn = document.querySelector('#btn');
+        const box = document.querySelector('#box');
+
+        const sendRequest = () => {
+            box.innerHTML = '';
+            
+            const req = new XMLHttpRequest();
+    
+            req.open('GET', 'https://pixabay.com/api/?key=51825027-d3f6e812d17a24dcb6a008acf&q='+q.value+'&image_type=photo', true);
+    
+            req.addEventListener('readystatechange', () => {
+                if(req.readyState == 4 && req.status == 200) {    
+                    const obj = JSON.parse(req.responseText);
+
+                    const arr = obj.hits;
+
+                    for(let nxObj of arr) {
+                        const img = document.createElement('img');
+                        img.src = nxObj.webformatURL;
+                        box.append(img);        
+                    }
+                }
+            });
+    
+            req.send();
+        };
+
+        btn.addEventListener('click', sendRequest);
+    </script>
+</body>
+</html>

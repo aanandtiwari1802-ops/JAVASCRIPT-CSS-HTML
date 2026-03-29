@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <table align="center" width="50%" border="1">
+        <tr>
+            <td align="right">ID:</td>
+            <td><input type="text" id="id"></td>
+        </tr>
+        <tr>
+            <td align="right">User ID:</td>
+            <td><input type="text" id="uid"></td>
+        </tr>
+        <tr>
+            <td align="right">Title:</td>
+            <td><input type="text" id="title"></td>
+        </tr>
+        <tr>
+            <td align="right">Completed:</td>
+            <td><input type="text" id="completed"></td>
+        </tr>
+    </table>
+
+    <button type="button" id="btn">Click Me</button>
+
+    <hr>
+    
+
+    <script>         
+        
+        let url = 'https://jsonplaceholder.typicode.com/todos/';
+
+        const networkRequest = async (url) => {            
+            const response = await fetch(url);    
+            return await response.json();
+        };        
+
+        const id = document.querySelector('#id');
+        const uid = document.querySelector('#uid');
+        const title = document.querySelector('#title');
+        const completed = document.querySelector('#completed');
+
+        const btn = document.querySelector('#btn');
+
+        const handleRecordResponse = (result) => {
+            id.value = result.id;
+            uid.value = result.userId;
+            title.value = result.title;
+            completed.value = result.completed;
+        };
+
+        
+        let i = 1; 
+        btn.addEventListener('click', ()=>{
+            // networkRequest(url + i++).then((data)=>{
+            //     handleRecordResponse(data);
+            // },(error)=>{
+            //     console.log(error, '-----');
+            // });
+            const y = networkRequest(url + i++).then((data)=>{
+                handleRecordResponse(data);
+            });
+
+            console.log(y, ' ~~~');
+        });
+    </script>
+</body>
+</html>

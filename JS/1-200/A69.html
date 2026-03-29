@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Some Text</h1>
+
+    <hr>
+
+    <script>
+        var a = 23;
+        let b = 23;
+        const c = 23;   // constant-variable
+
+        console.log(a, b, c);
+
+        a = 11;
+        b = 22;
+        // c = 33;    // Uncaught TypeError: Assignment to constant variable.
+ 
+        console.log(a, b, c);
+    </script>
+</body>
+</html>

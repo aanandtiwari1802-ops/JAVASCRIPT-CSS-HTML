@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        class Student {
+            constructor(name, age, company) {
+                this.name = name;
+                this.age = age;
+                this.company = company;
+                console.log('~~~~~~ ***** ~~~~~~')
+            }
+
+            showInfo() {
+                console.log(this.name, this.age, this.company, '~~~~~');
+                console.log('~~~~~~ ***--** ~~~~~~')
+            }
+
+            login() {
+                console.log('the user is logged in... ');
+                console.log('~~~~~~ ***~~** ~~~~~~')
+            }
+            
+            logout() {
+                console.log('the user is logged out... ');
+                console.log('~~~~~~ ***^^** ~~~~~~')
+            }
+        }
+
+        const x = new Student('jagdeep', 19, 'HEC');
+
+        x.showInfo();
+    </script>
+</body>
+</html>

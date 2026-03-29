@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <input type="button" id="a" value="Open New Window">
+    <input type="button" id="b" value="Close Window">
+
+    <script>
+
+        const a = document.querySelector('#a');
+        const b = document.querySelector('#b');
+
+        let win = null;
+
+        a.addEventListener('click', () => {
+            // win = window.open('https://rgpv.ac.in', '_self');
+            win = window.open('https://rgpv.ac.in', '_blank');
+        });
+
+        b.addEventListener('click', () => {
+            win.close();
+        });
+        
+
+    </script>
+</body>
+</html>

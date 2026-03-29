@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Password: <input type="password" id="x">
+
+    <br>
+
+    <button id="btn">Click Me</button>
+
+    <script>
+        const x = document.querySelector('#x');
+        const btn = document.querySelector('#btn');
+
+        btn.addEventListener('click', () => {
+            x.type = 'text';
+        });
+    </script>
+</body>
+</html>

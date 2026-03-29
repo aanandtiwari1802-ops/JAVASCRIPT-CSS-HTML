@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index pAge</h1>
+
+    <hr>
+
+    <script>
+        /*
+            Assignment Operator:
+            --------------------
+                    L    <------  R
+                <variable>   =  <value>
+                <operand 1>  =  <operand 2>;
+        */
+
+        function add(x, y) {
+            return x + y;
+        }
+        
+        let a = 2;
+        let b = a;
+        let c = a + b;
+        let d = add(12, 13);
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+
+
+        // SyntaxError: Invalid left-hand side in assignment
+        // 2 = 4;
+
+    </script>
+</body>
+</html>

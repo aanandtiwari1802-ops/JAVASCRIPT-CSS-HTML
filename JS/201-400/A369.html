@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        const x = [2, 2, 2, 2, 2, 2];
+
+
+        // function add(t, n, i, a) {
+        //     console.log(t, n, i, a, this)
+        //     return t + n;
+        // }
+
+        let sum = x.reduce(function (t, n, i, a) {
+            console.log(t, n, i, a)
+            return t * n;
+        }); 
+
+        console.log(sum);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="x">
+
+    <br>
+    <br>
+
+    <button id="btn">Click Me</button>
+
+    <script>
+        const x = document.querySelector('#x');
+        const btn = document.querySelector('#btn');
+
+        btn.addEventListener('click', () => {
+            x.placeholder = 'Enter Valid Name';
+        });
+    </script>
+</body>
+</html>

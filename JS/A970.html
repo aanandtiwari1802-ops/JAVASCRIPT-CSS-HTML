@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #z {
+            border: 3px solid rgb(29, 81, 154);
+            /* width: 700px; */
+            margin: 10px auto;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        #x {
+            border: 2px solid rgb(117, 9, 144);
+            float: left;
+            height: 200px;
+            width: 200px;
+        }
+
+        #y {
+            border: 2px solid rgb(5, 88, 27);
+            float: left;
+            margin-left: 10px;
+            height: 200px;
+            width: 200px;
+            display: inline-block;
+        }
+
+        .a {
+            border: 2px solid rgb(195, 11, 11);
+            padding: 8px 12px;
+            font-family: Verdana;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="z">
+        <div id="x">
+            <div class="a">Jabalpur</div>
+            <div class="a">Jaipur</div>
+            <div class="a">Jagdalpur</div>
+            <div class="a">Kanpur</div>
+            <div class="a">Nagpur</div>
+        </div>
+        <div id="y">
+            
+        </div>
+    </div>
+
+    <script>
+        const movables = document.querySelectorAll('.a');
+        const y = document.querySelector('#y');
+        const x = document.querySelector('#x');
+
+        
+        movables.forEach((next, index)=>{
+            next.draggable = true;
+            next.id = 'a'+index;
+
+            next.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('abc', e.target.id);
+            });
+        });
+
+        y.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        y.addEventListener('drop', (e) => {
+            e.preventDefault();
+            e.target.append(document.getElementById(e.dataTransfer.getData('abc')))
+        });
+
+        x.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        x.addEventListener('drop', (e) => {
+            e.preventDefault();
+            e.target.append(document.getElementById(e.dataTransfer.getData('abc')))
+        });
+    </script>
+</body>
+</html>

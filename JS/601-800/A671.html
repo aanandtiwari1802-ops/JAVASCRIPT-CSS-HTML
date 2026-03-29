@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <script>
+        class Student {
+            constructor(name, age, college) {
+                this.name = name;
+                this.age = age;
+                this.college = college;
+                console.log('~~~~~~ ***** ~~~~~~')
+            }
+
+            showStudent() {
+                console.log(this.name, this.age, this.college, '~~~~~');
+                console.log('~~~~~~ ***--** ~~~~~~')
+            }
+        }
+
+        class Teacher {
+            constructor(name, age, college) {
+                this.name = name;
+                this.age = age;
+                this.college = college;
+                console.log('~~~~~~ #### ~~~~~~')
+            }
+
+            showTeacher() {
+                console.log(this.name, this.age, this.college, '~~~~~');
+                console.log('~~~~~~ ####--## ~~~~~~')
+            }
+        }
+
+        const x = new Student('jagdeep', 19, 'HEC');
+        const y = new Teacher('Mr.Rao', 45, 'IITK');
+
+        y.showStudent();  // TypeError: y.showStudent is not a function
+        x.showTeacher();  // TypeError: x.showTeacher is not a function
+        
+    </script>
+</body>
+</html>

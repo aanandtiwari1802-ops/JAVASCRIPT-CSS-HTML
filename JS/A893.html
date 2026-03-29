@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index pAge</h1>
+
+    <hr>
+
+    <script>
+        const showInfo = function() {
+                            console.log(`Name: ${this.name} Age: ${this.age} and ${this}`)
+                         };
+
+        const a = {
+                    name: 'om', 
+                    age: 12
+                  };
+        
+        const b = {
+                    name: 'raj', 
+                    age: 21
+                  };        
+        
+        const c = {
+                    name: 'raju', 
+                    age: 5
+                  };
+
+
+        const func1 = showInfo.bind(a);
+        const func2 = showInfo.bind(b);
+        const func3 = showInfo.bind(c);
+        
+        func1();        
+        func2();        
+        func3();    
+        console.log('~~~~~~~~~~~~~~~~~~~~~~~')    
+        showInfo();
+    </script>
+</body>
+</html>
